@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-rt-gjM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgDefaultApp" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-rt-gjM">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="PMX-n8-je2"/>
@@ -118,4 +118,7 @@
             <point key="canvasLocation" x="423" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imgDefaultApp" width="90" height="90"/>
+    </resources>
 </document>
