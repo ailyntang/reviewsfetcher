@@ -32,7 +32,7 @@
                                 <rect key="frame" x="16" y="83" width="343" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="6cr-Zw-B8p">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" rowHeight="90" id="6cr-Zw-B8p" customClass="HomeTableViewCell" customModule="ReviewsFetcher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6cr-Zw-B8p" id="qv3-dU-72h">
@@ -92,6 +92,12 @@
                                                 <constraint firstItem="sbd-iR-U79" firstAttribute="leading" secondItem="t4U-rt-gjM" secondAttribute="trailing" constant="8" id="ziF-XS-gO5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="appImageView" destination="t4U-rt-gjM" id="Rmd-fj-G0t"/>
+                                            <outlet property="appNameLabel" destination="KBK-4G-xBl" id="RUj-Ee-cSm"/>
+                                            <outlet property="appleAppStoreStarRatingLabel" destination="zQc-NB-js7" id="bz8-0p-dlb"/>
+                                            <outlet property="googlePlayStoreStarRatingLabel" destination="B0f-iW-xEG" id="8ac-Wt-BlF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -109,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="423" y="125"/>
         </scene>
     </scenes>
 </document>
