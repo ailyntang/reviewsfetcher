@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
   
   //Properties
   @IBOutlet weak private var appImageView: UIImageView!
