@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct App {
   
-  //TODO: Figure out how to uncomment appImage as UIImageView is not a type
-//  let appImage: UIImageView
+  let appImage: UIImageView
   let appName: String
   let appleAppStoreStarRating: String
   let googlePlayStoreStarRating: String
