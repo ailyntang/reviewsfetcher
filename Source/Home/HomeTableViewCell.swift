@@ -16,4 +16,26 @@ class HomeTableViewCell: UITableViewCell {
   @IBOutlet weak private var appleAppStoreStarRatingLabel: UILabel!
   @IBOutlet weak private var googlePlayStoreStarRatingLabel: UILabel!
   
+  // TODO: var appImage: UIImage. Not sure how this works.
+  
+  var appName: String? {
+    didSet {
+      appNameLabel.text = appName
+    }
+  }
+  
+  var appleAppStoreStarRating: String? {
+    didSet {
+      appleAppStoreStarRatingLabel.text = appleAppStoreStarRating
+    }
+  }
+  
+  var googlePlayStoreStarRating: String? {
+    didSet {
+      googlePlayStoreStarRatingLabel.text = googlePlayStoreStarRating
+    }
+  }
+  
+  
+  
 }
