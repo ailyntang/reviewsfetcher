@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303F359338CC078C9E1D4AC3 /* Pods_ReviewsFetcherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1041B587C9235DBD9B85E2B8 /* Pods_ReviewsFetcherUITests.framework */; };
 		6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E503B1EF0987100ED1A1C /* Home.storyboard */; };
 		6A6E50471EF0987100ED1A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E503C1EF0987100ED1A1C /* HomeViewController.swift */; };
 		6A6E50481EF0987100ED1A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E50401EF0987100ED1A1C /* Assets.xcassets */; };
@@ -15,9 +16,34 @@
 		6AB5023E1EF5EDBB0045C674 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */; };
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
 		6AB502421EF6682F0045C674 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB502411EF6682F0045C674 /* HomeDataSource.swift */; };
+		6AC3F1AB1F19CB9900E29BE9 /* ReviewsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */; };
+		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
+		A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */; };
+		DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6AC3F1AD1F19CB9900E29BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A6E501C1EEFDDCD00ED1A1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6E50231EEFDDCD00ED1A1C;
+			remoteInfo = ReviewsFetcher;
+		};
+		6AC3F1BB1F19CBBA00E29BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A6E501C1EEFDDCD00ED1A1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6E50231EEFDDCD00ED1A1C;
+			remoteInfo = ReviewsFetcher;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1041B587C9235DBD9B85E2B8 /* Pods_ReviewsFetcherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B14C39F8F08CA86BDFBB1AF /* Pods-ReviewsFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcher/Pods-ReviewsFetcher.debug.xcconfig"; sourceTree = "<group>"; };
+		2A54A847BB013367678CC865 /* Pods-ReviewsFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcher/Pods-ReviewsFetcher.release.xcconfig"; sourceTree = "<group>"; };
+		2F96A9DEA243A0A29DB75FD6 /* Pods-ReviewsFetcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherTests/Pods-ReviewsFetcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A6E50241EEFDDCD00ED1A1C /* ReviewsFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewsFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6E503B1EF0987100ED1A1C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6A6E503C1EF0987100ED1A1C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +54,17 @@
 		6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		6AB5023F1EF664550045C674 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		6AB502411EF6682F0045C674 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherTests.swift; sourceTree = "<group>"; };
+		6AC3F1AC1F19CB9900E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AC3F1B61F19CBBA00E29BE9 /* ReviewsFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherUITests.swift; sourceTree = "<group>"; };
+		6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78C2B35D6B908F684A5480E /* Pods-ReviewsFetcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherTests/Pods-ReviewsFetcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +72,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC3F1A51F19CB9900E29BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC3F1B31F19CBBA00E29BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303F359338CC078C9E1D4AC3 /* Pods_ReviewsFetcherUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4600EC7BBA6ABF490129EFA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B14C39F8F08CA86BDFBB1AF /* Pods-ReviewsFetcher.debug.xcconfig */,
+				2A54A847BB013367678CC865 /* Pods-ReviewsFetcher.release.xcconfig */,
+				D78C2B35D6B908F684A5480E /* Pods-ReviewsFetcherTests.debug.xcconfig */,
+				2F96A9DEA243A0A29DB75FD6 /* Pods-ReviewsFetcherTests.release.xcconfig */,
+				CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */,
+				9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6A6E501B1EEFDDCD00ED1A1C = {
 			isa = PBXGroup;
 			children = (
 				6A6E50391EF0987100ED1A1C /* Source */,
+				6AC3F1A91F19CB9900E29BE9 /* ReviewsFetcherTests */,
+				6AC3F1B71F19CBBA00E29BE9 /* ReviewsFetcherUITests */,
 				6A6E50251EEFDDCD00ED1A1C /* Products */,
+				4600EC7BBA6ABF490129EFA4 /* Pods */,
+				E775F9B74DDE8C62B84411C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				6A6E50241EEFDDCD00ED1A1C /* ReviewsFetcher.app */,
+				6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */,
+				6AC3F1B61F19CBBA00E29BE9 /* ReviewsFetcherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +194,34 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AC3F1A91F19CB9900E29BE9 /* ReviewsFetcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */,
+				6AC3F1AC1F19CB9900E29BE9 /* Info.plist */,
+			);
+			path = ReviewsFetcherTests;
+			sourceTree = "<group>";
+		};
+		6AC3F1B71F19CBBA00E29BE9 /* ReviewsFetcherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */,
+				6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */,
+			);
+			path = ReviewsFetcherUITests;
+			sourceTree = "<group>";
+		};
+		E775F9B74DDE8C62B84411C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */,
+				F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */,
+				1041B587C9235DBD9B85E2B8 /* Pods_ReviewsFetcherUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A6E50361EEFDDCE00ED1A1C /* Build configuration list for PBXNativeTarget "ReviewsFetcher" */;
 			buildPhases = (
+				50EB9B6352E98AD4978AE5AA /* [CP] Check Pods Manifest.lock */,
 				6A6E50201EEFDDCD00ED1A1C /* Sources */,
 				6A6E50211EEFDDCD00ED1A1C /* Frameworks */,
 				6A6E50221EEFDDCD00ED1A1C /* Resources */,
+				FB91EB8E1376288330D86349 /* [CP] Embed Pods Frameworks */,
+				1D75499A234DAFF09DD01513 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +244,48 @@
 			productName = ReviewsFetcher;
 			productReference = 6A6E50241EEFDDCD00ED1A1C /* ReviewsFetcher.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6AC3F1A71F19CB9900E29BE9 /* ReviewsFetcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC3F1B11F19CB9900E29BE9 /* Build configuration list for PBXNativeTarget "ReviewsFetcherTests" */;
+			buildPhases = (
+				E55881F33D0DFA812CF66A8F /* [CP] Check Pods Manifest.lock */,
+				6AC3F1A41F19CB9900E29BE9 /* Sources */,
+				6AC3F1A51F19CB9900E29BE9 /* Frameworks */,
+				6AC3F1A61F19CB9900E29BE9 /* Resources */,
+				7CB0133DC643D6E7C42C9210 /* [CP] Embed Pods Frameworks */,
+				1BAB430377FED96312CC5879 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC3F1AE1F19CB9900E29BE9 /* PBXTargetDependency */,
+			);
+			name = ReviewsFetcherTests;
+			productName = ReviewsFetcherTests;
+			productReference = 6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6AC3F1B51F19CBBA00E29BE9 /* ReviewsFetcherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC3F1BD1F19CBBA00E29BE9 /* Build configuration list for PBXNativeTarget "ReviewsFetcherUITests" */;
+			buildPhases = (
+				24B83AB1E7A22FF892C652B0 /* [CP] Check Pods Manifest.lock */,
+				6AC3F1B21F19CBBA00E29BE9 /* Sources */,
+				6AC3F1B31F19CBBA00E29BE9 /* Frameworks */,
+				6AC3F1B41F19CBBA00E29BE9 /* Resources */,
+				CE7E2855FA863D588341C14B /* [CP] Embed Pods Frameworks */,
+				1F41EA028DF98A2086726101 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC3F1BC1F19CBBA00E29BE9 /* PBXTargetDependency */,
+			);
+			name = ReviewsFetcherUITests;
+			productName = ReviewsFetcherUITests;
+			productReference = 6AC3F1B61F19CBBA00E29BE9 /* ReviewsFetcherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -154,6 +300,16 @@
 					6A6E50231EEFDDCD00ED1A1C = {
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
+					};
+					6AC3F1A71F19CB9900E29BE9 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6A6E50231EEFDDCD00ED1A1C;
+					};
+					6AC3F1B51F19CBBA00E29BE9 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6A6E50231EEFDDCD00ED1A1C;
 					};
 				};
 			};
@@ -171,6 +327,8 @@
 			projectRoot = "";
 			targets = (
 				6A6E50231EEFDDCD00ED1A1C /* ReviewsFetcher */,
+				6AC3F1A71F19CB9900E29BE9 /* ReviewsFetcherTests */,
+				6AC3F1B51F19CBBA00E29BE9 /* ReviewsFetcherUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +344,159 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AC3F1A61F19CB9900E29BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC3F1B41F19CBBA00E29BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BAB430377FED96312CC5879 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcherTests/Pods-ReviewsFetcherTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D75499A234DAFF09DD01513 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcher/Pods-ReviewsFetcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F41EA028DF98A2086726101 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24B83AB1E7A22FF892C652B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		50EB9B6352E98AD4978AE5AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CB0133DC643D6E7C42C9210 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcherTests/Pods-ReviewsFetcherTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE7E2855FA863D588341C14B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E55881F33D0DFA812CF66A8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB91EB8E1376288330D86349 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReviewsFetcher/Pods-ReviewsFetcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A6E50201EEFDDCD00ED1A1C /* Sources */ = {
@@ -201,7 +511,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AC3F1A41F19CB9900E29BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC3F1AB1F19CB9900E29BE9 /* ReviewsFetcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC3F1B21F19CBBA00E29BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AC3F1AE1F19CB9900E29BE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A6E50231EEFDDCD00ED1A1C /* ReviewsFetcher */;
+			targetProxy = 6AC3F1AD1F19CB9900E29BE9 /* PBXContainerItemProxy */;
+		};
+		6AC3F1BC1F19CBBA00E29BE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A6E50231EEFDDCD00ED1A1C /* ReviewsFetcher */;
+			targetProxy = 6AC3F1BB1F19CBBA00E29BE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6A6E50341EEFDDCE00ED1A1C /* Debug */ = {
@@ -301,6 +640,7 @@
 		};
 		6A6E50371EEFDDCE00ED1A1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B14C39F8F08CA86BDFBB1AF /* Pods-ReviewsFetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
@@ -313,6 +653,7 @@
 		};
 		6A6E50381EEFDDCE00ED1A1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A54A847BB013367678CC865 /* Pods-ReviewsFetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
@@ -320,6 +661,60 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6AC3F1AF1F19CB9900E29BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78C2B35D6B908F684A5480E /* Pods-ReviewsFetcherTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReviewsFetcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReviewsFetcher.app/ReviewsFetcher";
+			};
+			name = Debug;
+		};
+		6AC3F1B01F19CB9900E29BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F96A9DEA243A0A29DB75FD6 /* Pods-ReviewsFetcherTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReviewsFetcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReviewsFetcher.app/ReviewsFetcher";
+			};
+			name = Release;
+		};
+		6AC3F1BE1F19CBBA00E29BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ReviewsFetcherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReviewsFetcher;
+			};
+			name = Debug;
+		};
+		6AC3F1BF1F19CBBA00E29BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ReviewsFetcherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ReviewsFetcher;
 			};
 			name = Release;
 		};
@@ -343,6 +738,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6AC3F1B11F19CB9900E29BE9 /* Build configuration list for PBXNativeTarget "ReviewsFetcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC3F1AF1F19CB9900E29BE9 /* Debug */,
+				6AC3F1B01F19CB9900E29BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AC3F1BD1F19CBBA00E29BE9 /* Build configuration list for PBXNativeTarget "ReviewsFetcherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC3F1BE1F19CBBA00E29BE9 /* Debug */,
+				6AC3F1BF1F19CBBA00E29BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
