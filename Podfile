@@ -7,6 +7,8 @@ use_frameworks!
 def testing_pods
   pod 'Quick'
   pod 'Nimble'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
 
 target 'ReviewsFetcherTests' do
@@ -18,6 +20,6 @@ target 'ReviewsFetcherUITests' do
 end
 
 target 'ReviewsFetcher' do
-
-
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
