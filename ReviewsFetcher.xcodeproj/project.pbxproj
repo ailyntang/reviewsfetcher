@@ -643,6 +643,7 @@
 			baseConfigurationReference = 1B14C39F8F08CA86BDFBB1AF /* Pods-ReviewsFetcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcher;
@@ -656,6 +657,7 @@
 			baseConfigurationReference = 2A54A847BB013367678CC865 /* Pods-ReviewsFetcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ReviewsFetcher;
@@ -746,6 +748,7 @@
 				6AC3F1B01F19CB9900E29BE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AC3F1BD1F19CBBA00E29BE9 /* Build configuration list for PBXNativeTarget "ReviewsFetcherUITests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +757,7 @@
 				6AC3F1BF1F19CBBA00E29BE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
