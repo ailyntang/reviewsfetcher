@@ -16,7 +16,6 @@
 		6AB5023E1EF5EDBB0045C674 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */; };
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
 		6AB502421EF6682F0045C674 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB502411EF6682F0045C674 /* HomeDataSource.swift */; };
-		6AC3F1AB1F19CB9900E29BE9 /* ReviewsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */; };
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
 		A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */; };
 		DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */; };
@@ -55,7 +54,6 @@
 		6AB5023F1EF664550045C674 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		6AB502411EF6682F0045C674 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherTests.swift; sourceTree = "<group>"; };
 		6AC3F1AC1F19CB9900E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC3F1B61F19CBBA00E29BE9 /* ReviewsFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherUITests.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 		6AC3F1A91F19CB9900E29BE9 /* ReviewsFetcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				6AC3F1AA1F19CB9900E29BE9 /* ReviewsFetcherTests.swift */,
 				6AC3F1AC1F19CB9900E29BE9 /* Info.plist */,
 			);
 			path = ReviewsFetcherTests;
@@ -515,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AC3F1AB1F19CB9900E29BE9 /* ReviewsFetcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
