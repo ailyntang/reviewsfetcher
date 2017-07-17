@@ -25,9 +25,9 @@ extension HomeDataSource: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as! HomeTableViewCell
     let app = apps[indexPath.row]
     
-    cell.appName = app.appName
-    cell.appleAppStoreStarRating = app.appleAppStoreStarRating
-    cell.googlePlayStoreStarRating = app.googlePlayStoreStarRating
+    cell.appName = app.name
+//    cell.appleAppStoreStarRating = app.appleAppStoreStarRating
+//    cell.googlePlayStoreStarRating = app.googlePlayStoreStarRating
     
     return cell
   }

@@ -10,12 +10,31 @@ import Foundation
 import SwiftyJSON
 
 struct App {
-  
-  let appIcon: UIImageView
-  let appName: String
-  let appId: Int
-  let appleAppStoreStarRating: String
-  let googlePlayStoreStarRating: String
+
+  // MARK: Public Properties
+
+  let icon: UIImage?
+  let name: String?
+  let id: Int?
+  let appleRating: Double?
+  let googleRating: Double?
+
+  // MARK: Initialisation
+
+  init(icon: UIImage? = nil,
+       name: String? = nil,
+       id: Int? = nil,
+       appleRating: Double? = nil,
+       googleRating: Double? = nil) {
+
+    self.icon = icon
+    self.name = name
+    self.id = id
+    self.appleRating = appleRating
+    self.googleRating = googleRating
+  }
+
+  // MARK: Public Methods
 
   func parseDataFromJson(json: JSON) -> [App] {
     var newApps: [App]? = []
