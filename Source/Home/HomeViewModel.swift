@@ -18,9 +18,13 @@ import SwiftyJSON
  */
 final class HomeViewModel {
 
+  // MARK: Conformance: HomeViewModelType
+
+  weak var delegate: HomeViewModelDelegate?
+
   // MARK: Properties
 
-  private var listOfAppIds: [String]?
+  fileprivate var listOfAppIds: [String]?
 
   // MARK: Initialisation
 
@@ -28,18 +32,24 @@ final class HomeViewModel {
     self.listOfAppIds = listOfAppIds
   }
 
-  // MARKK: Public Methods
+}
 
-  func reloadViews() {
+// MARK: - Conformance: HomeViewModelType
+
+extension HomeViewModel: HomeViewModelType {
+
+  func controllerDidAppear() {
+
+    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
 
     fetchApps(appIds: listOfAppIds!, completionHandler: { myApp in
-      print(myApp)
+      self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
     })
   }
 
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 private extension HomeViewModel {
 
   func fetchApps(appIds: [String], completionHandler: @escaping (Void) -> Void) {
@@ -56,4 +66,5 @@ private extension HomeViewModel {
       }
     }
   }
+
 }

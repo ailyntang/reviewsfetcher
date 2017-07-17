@@ -10,13 +10,47 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+  // MARK: Properties
+
+  private var viewModel: HomeViewModelType!
+
+  fileprivate var activityIndicator = UIActivityIndicatorView()
+
+  // MARK: Lifecycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
+    viewModel = HomeViewModel(with: ["8968"])
+    viewModel?.delegate = self
+    viewModel?.controllerDidAppear()
+    }
 
 }
 
+// MARK: - Conformance: HomeViewModelDelegate
+
+extension HomeViewController: HomeViewModelDelegate {
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
+    setupActivityIndicator()
+
+    if activityIndicatorState == "start" {
+      activityIndicator.startAnimating()
+    } else {
+      activityIndicator.stopAnimating()
+    }
+  }
+}
+
+// MARK: - Private Methods
+
+private extension HomeViewController {
+
+  func setupActivityIndicator() {
+    activityIndicator.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 40, height: 40))
+    activityIndicator.center = self.view.center
+    activityIndicator.activityIndicatorViewStyle = .gray
+    view.addSubview(activityIndicator)
+  }
+}
