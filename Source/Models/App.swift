@@ -7,13 +7,24 @@
 //
 
 import Foundation
-import UIKit
+import SwiftyJSON
 
 struct App {
   
-  let appImage: UIImageView
+  let appIcon: UIImageView
   let appName: String
+  let appId: Int
   let appleAppStoreStarRating: String
   let googlePlayStoreStarRating: String
 
+  func parseDataFromJson(json: JSON) -> [App] {
+    var newApps: [App]? = []
+
+    if let arrayOfAllAttributes = json["results"].array {
+      for app in arrayOfAllAttributes {
+      }
+    }
+
+    return newApps!
+  }
 }
