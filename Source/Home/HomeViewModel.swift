@@ -40,8 +40,6 @@ extension HomeViewModel: HomeViewModelType {
 
   func controllerDidAppear() {
 
-    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
-
     fetchApps(appIds: listOfAppIds!, completionHandler: { myApp in
       self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
     })
@@ -53,8 +51,10 @@ extension HomeViewModel: HomeViewModelType {
 private extension HomeViewModel {
 
   func fetchApps(appIds: [String], completionHandler: @escaping (Void) -> Void) {
-    let urlString = "http://swapi.co/api/people/"
 
+    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
+
+    let urlString = "http://swapi.co/api/people/"
     Alamofire.request(urlString).responseData{ dataResponse in
 
       if let data = dataResponse.result.value {
