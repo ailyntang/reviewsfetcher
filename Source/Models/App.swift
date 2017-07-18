@@ -9,29 +9,53 @@
 import Foundation
 import SwiftyJSON
 
+/**
+ The `App` model contains information about a given app live in an app store.
+ */
 struct App {
 
   // MARK: Public Properties
 
-  let icon: UIImage?
-  let name: String?
+  /**
+   `id` refers to the product id from App Figures. 
+   This is different to the product id from iTunes or the Google Play Store.
+  */
   let id: Int?
-  let appleRating: Double?
-  let googleRating: Double?
+
+  /**
+   The name of the app in the app store
+   */
+  let name: String?
+
+  /**
+   The icon used by the app in the app store and on the phone
+   */
+  let icon: UIImage?
+
+  /**
+   The store of the app. The possible values are `apple`, `google_play` and `amazon`.
+   */
+  let store: String?
+
+  /**
+   The average rating of the app in its app store.
+   TBD whether this is for the most current version or for all time.
+   */
+  let rating: Double?
 
   // MARK: Initialisation
 
-  init(icon: UIImage? = nil,
+  init(id: Int? = nil,
        name: String? = nil,
-       id: Int? = nil,
-       appleRating: Double? = nil,
-       googleRating: Double? = nil) {
+       icon: UIImage? = nil,
+       store: String? = nil,
+       rating: Double? = nil) {
 
-    self.icon = icon
-    self.name = name
     self.id = id
-    self.appleRating = appleRating
-    self.googleRating = googleRating
+    self.name = name
+    self.icon = icon
+    self.store = store
+    self.rating = rating
   }
 
   // MARK: Public Methods

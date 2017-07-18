@@ -19,11 +19,11 @@ final class AppTests: QuickSpec {
     describe("An app") {
 
       // Arrangement
-      let icon = #imageLiteral(resourceName: "imgDefaultApp")
-      let name = "Coles App"
       let id = 212243832
-      let appleRating = 3.4
-      let googleRating = 3.8
+      let name = "Coles App"
+      let icon = #imageLiteral(resourceName: "imgDefaultApp")
+      let store = "apple"
+      let rating = 3.8
 
       it("should have optional values for all its parameters") {
 
@@ -31,28 +31,28 @@ final class AppTests: QuickSpec {
         let app = App()
 
         // Assertion
-        expect(app.icon).to(beNil())
-        expect(app.name).to(beNil())
         expect(app.id).to(beNil())
-        expect(app.appleRating).to(beNil())
-        expect(app.googleRating).to(beNil())
+        expect(app.name).to(beNil())
+        expect(app.icon).to(beNil())
+        expect(app.store).to(beNil())
+        expect(app.rating).to(beNil())
       }
 
       it("should initialise with the correct values") {
 
         // Action
-        let app = App(icon: icon,
+        let app = App(id: id,
                       name: name,
-                      id: id,
-                      appleRating: appleRating,
-                      googleRating: googleRating)
+                      icon: icon,
+                      store: store,
+                      rating: rating)
 
         // Assertion
-        expect(app.icon).to(equal(#imageLiteral(resourceName: "imgDefaultApp")))
-        expect(app.name).to(equal(name))
         expect(app.id).to(equal(id))
-        expect(app.appleRating).to(equal(appleRating))
-        expect(app.googleRating).to(equal(googleRating))
+        expect(app.name).to(equal(name))
+        expect(app.icon).to(equal(#imageLiteral(resourceName: "imgDefaultApp")))
+        expect(app.store).to(equal(store))
+        expect(app.rating).to(equal(rating))
       }
 
     }
