@@ -20,7 +20,7 @@ final class NetworkManager {
 
    - parameter appId: the App Figures product id unique to every app
    */
-  func fetchApp(appId: Int, completionHandler: @escaping (Void) -> Void) {
+  class func fetchApp(appId: Int, completionHandler: @escaping (Void) -> Void) {
 
     let clientKey = "6cc908cce44e492f844fd7921b953878"
     let urlStringStart = "https://api.appfigures.com/v2/products/"
