@@ -58,16 +58,32 @@ struct App {
     self.rating = rating
   }
 
-  // MARK: Public Methods
+}
 
-  func parseDataFromJson(json: JSON) -> [App] {
-    var newApps: [App]? = []
+// MARK: - Public Methods
 
-    if let arrayOfAllAttributes = json["results"].array {
-      for app in arrayOfAllAttributes {
-      }
+extension App {
+  static func parseDataFromJson(json: JSON) -> App {
+
+    var newApp = App()
+
+    if let idString = json["id"].string {
+
+      let name = json["name"].string
+//      let iconString = json["icon"].string
+      let store = json["store"].string
+      let rating = 3.0
+
+      let id = Int(idString)
+      let icon = #imageLiteral(resourceName: "imgDefaultApp")
+
+      newApp = App(id: id, name: name, icon: icon, store: store, rating: rating)
+
+    } else {
+      print("id is nil. No app returned from json.")
     }
 
-    return newApps!
+    return newApp
+
   }
 }
