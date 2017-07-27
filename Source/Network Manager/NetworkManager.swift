@@ -36,6 +36,7 @@ final class NetworkManager {
         print("Woo hoo! \(arrayOfApps)")
 
         completionHandler()
+        app = App.parseAppOverview(from: json)
       }
     }
   }

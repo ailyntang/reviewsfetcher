@@ -63,7 +63,7 @@ struct App {
 // MARK: - Public Methods
 
 extension App {
-  static func parseAppOverviewFromJson(json: JSON) -> App {
+  static func parseAppOverview(from json: JSON) -> App {
 
     var newApp = App()
 
