@@ -20,7 +20,7 @@ final class NetworkManager {
 
    - parameter appId: an integer with the App Figures product id unique to every app
    */
-  class func fetchApp(appId: Int, completionHandler: @escaping (App?) -> Void) {
+  class func fetchAppOverview(appId: Int, completionHandler: @escaping (App?) -> Void) {
 
     // TODO: I think there's an authentication issue here
     // So it always returns no app, even though in the browser the same URL returns an app
