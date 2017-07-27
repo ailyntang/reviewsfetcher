@@ -79,8 +79,13 @@ extension App {
 
       newApp = App(id: id, name: name, icon: icon, store: store, rating: rating)
 
+    } else if let errorMessage = json["message"].string {
+
+      // TODO: Make this log an error in the debug log (see safefood)
+      print("Error: \(errorMessage)")
+
     } else {
-      print("id is nil. No app returned from json.")
+      print("No app id and no error message returned from json.")
     }
 
     return newApp
