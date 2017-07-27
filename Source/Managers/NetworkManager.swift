@@ -37,7 +37,7 @@ final class NetworkManager {
       if let data = dataResponse.result.value {
 
         let json = JSON(data: data)
-        app = App.parseAppOverview(from: json)
+        app = ParseManager.parseAppOverview(from: json)
         completionHandler(app)
 
       } else {
