@@ -16,7 +16,6 @@
 		6A2AC1421F2A8E0300FE0C71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC1411F2A8E0300FE0C71 /* NetworkManager.swift */; };
 		6A2AC1441F2A907000FE0C71 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC1431F2A907000FE0C71 /* ParseManager.swift */; };
 		6A2AC1461F2E85EC00FE0C71 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC1451F2E85EC00FE0C71 /* AuthenticationManager.swift */; };
-		6A3DDF821F327941002EA965 /* StubAppOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DDF811F327941002EA965 /* StubAppOverview.swift */; };
 		6A3DDF841F327C41002EA965 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A3DDF831F327C41002EA965 /* StubAppOverview.json */; };
 		6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E503B1EF0987100ED1A1C /* Home.storyboard */; };
 		6A6E50471EF0987100ED1A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E503C1EF0987100ED1A1C /* HomeViewController.swift */; };
@@ -61,7 +60,6 @@
 		6A2AC1411F2A8E0300FE0C71 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6A2AC1431F2A907000FE0C71 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		6A2AC1451F2E85EC00FE0C71 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		6A3DDF811F327941002EA965 /* StubAppOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubAppOverview.swift; sourceTree = "<group>"; };
 		6A3DDF831F327C41002EA965 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
 		6A6E50241EEFDDCD00ED1A1C /* ReviewsFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewsFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6E503B1EF0987100ED1A1C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				6A6E50441EF0987100ED1A1C /* Info.plist */,
 				6A6E50451EF0987100ED1A1C /* LaunchScreen.storyboard */,
-				6A3DDF811F327941002EA965 /* StubAppOverview.swift */,
 				6A3DDF831F327C41002EA965 /* StubAppOverview.json */,
 			);
 			path = "Supporting Files";
@@ -541,7 +538,6 @@
 				6AB502401EF664550045C674 /* App.swift in Sources */,
 				6A6E50491EF0987100ED1A1C /* AppDelegate.swift in Sources */,
 				6A1B08041F1B53B300CFEE89 /* HomeViewModelDelegate.swift in Sources */,
-				6A3DDF821F327941002EA965 /* StubAppOverview.swift in Sources */,
 				6A6E50471EF0987100ED1A1C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
