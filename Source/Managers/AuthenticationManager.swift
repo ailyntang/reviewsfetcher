@@ -13,15 +13,15 @@ final class AuthenticationManager {
 
   // MARK: Public Method
 
-  class func authenticateWithoutAuthorisation() {
+  class func authenticateWithoutAuthorisation2() {
 
     // create an instance and retain it
     let oauthswift = OAuth1Swift(
-      consumerKey:    "6cc908cce44e492f844fd7921b953878",
-      consumerSecret: "a72e958e98f74042adcabcc9ef0a88cd&",
-      requestTokenUrl: "https://api.appfigures.com/v2/oauth/request_token",
-      authorizeUrl:    "https://api.appfigures.com/v2/oauth/authorize",
-      accessTokenUrl:  "https://api.appfigures.com/v2/oauth/access_token"
+      consumerKey:    "yBhDKr7lAtAATcM9VreoqF3GK",
+      consumerSecret: "Mv825NRChcqR5GVwC9TJD7RsvHq6Qg9lZVgeD4xhuKuEaVWMD0",
+      requestTokenUrl: "https://api.twitter.com/oauth/request_token",
+      authorizeUrl:    "https://api.twitter.com/oauth/authorize",
+      accessTokenUrl:  "https://api.twitter.com/oauth/access_token"
     )
 
     // authorize
@@ -32,8 +32,14 @@ final class AuthenticationManager {
     let url1 = "https://api.appfigures.com/v2/products/40332083066?"
     let url2 = "oauth-swift://oauth-callback/reviewsFetcher"
 
+    // retain error -10, I put this into the callback URL on the Twitter settings page
+    let url3 = "http://oauthswift.herokuapp.com/callback/twitter"
+
+    // retain error -10. Twitter doesn't recognise this as a valid URL on the Twitter settings page
+    let url4 = "oauth-swift://oauth-callback/twitter"
+
     let handle = oauthswift.authorize(
-      withCallbackURL: URL(string: url2)!,
+      withCallbackURL: URL(string: url4)!,
       success: { credential, response, parameters in
         print(credential.oauthToken)
         print(credential.oauthTokenSecret)
@@ -76,28 +82,48 @@ final class AuthenticationManager {
 
   // Builds but always fails as access token is invalid
   // I have tried with the & and without the & at the end of the consumer secret
-  class func authenticateWithoutAuthorisation2() {
+  class func authenticateWithoutAuthorisation() {
 
     // create an instance and retain it
+//    let oauthswift = OAuth1Swift(
+//      consumerKey:    "6cc908cce44e492f844fd7921b953878",
+//      consumerSecret: "a72e958e98f74042adcabcc9ef0a88cd&",
+//      requestTokenUrl: "https://api.appfigures.com/v2/oauth/request_token",
+//      authorizeUrl:    "https://api.appfigures.com/v2/oauth/authorize",
+//      accessTokenUrl:  "https://api.appfigures.com/v2/oauth/access_token"
+//    )
+
     let oauthswift = OAuth1Swift(
-      consumerKey:    "6cc908cce44e492f844fd7921b953878",
-      consumerSecret: "a72e958e98f74042adcabcc9ef0a88cd&",
-      requestTokenUrl: "https://api.appfigures.com/v2/oauth/request_token",
-      authorizeUrl:    "https://api.appfigures.com/v2/oauth/authorize",
-      accessTokenUrl:  "https://api.appfigures.com/v2/oauth/access_token"
+      consumerKey:    "yBhDKr7lAtAATcM9VreoqF3GK",
+      consumerSecret: "Mv825NRChcqR5GVwC9TJD7RsvHq6Qg9lZVgeD4xhuKuEaVWMD0",
+      requestTokenUrl: "https://api.twitter.com/oauth/request_token",
+      authorizeUrl:    "https://api.twitter.com/oauth/authorize",
+      accessTokenUrl:  "https://api.twitter.com/oauth/access_token"
     )
 
     // do your HTTP request without authorize
-    oauthswift.client.get("https://api.appfigures.com/v2/products/40332083066?",
-                          success: { response in
-                            //....
-                            print("Authentication success!")
-    },
-                          failure: { error in
-                            print("Authentication failure")
-                            print(error)
+//    oauthswift.client.get("https://api.appfigures.com/v2/products/40332083066?",
+//                          success: { response in
+//                            //....
+//                            print("Authentication success!")
+//    },
+//                          failure: { error in
+//                            print("Authentication failure")
+//                            print(error)
+//    }
+//    )
+
+
+    let _ = oauthswift.client.get(
+      "https://api.twitter.com/1.1/statuses/mentions_timeline.json", parameters: [:],
+      success: { response in
+        let jsonDict = try? response.jsonObject()
+        print(String(describing: jsonDict))
+    }, failure: { error in
+      print(error)
     }
     )
+
   }
 
 }
