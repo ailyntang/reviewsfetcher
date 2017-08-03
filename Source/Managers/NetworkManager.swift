@@ -20,7 +20,7 @@ final class NetworkManager {
 
    - parameter appId: an integer with the App Figures product id unique to every app
    */
-  class func fetchAppOverview(appId: Int, completionHandler: @escaping (App?) -> Void) {
+  class func fetchAppOverview(appId: Int, completionHandler: @escaping (App) -> Void) {
 
     // MARK: Network call to AppFigures (not working)
 
