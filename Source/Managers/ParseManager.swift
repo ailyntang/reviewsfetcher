@@ -15,15 +15,17 @@ final class ParseManager {
 
     var newApp = App()
 
-    if let idString = json["id"].string {
+    if let _ = json["id"].int {
 
-      let name = json["name"].string
-      // TODO: read iconString and return UIImage
-      //      let iconString = json["icon"].string
-      let store = json["store"].string
+      let id = json["id"].intValue
+      let name = json["name"].stringValue
+      let iconString = json["icon"].stringValue
+      let store = json["store"].stringValue
+
+      // TODO: delete rating from AppModel. It's not used here.
       let rating = 3.0
 
-      let id = Int(idString)
+      // TODO: read iconString and return UIImage
       let icon = #imageLiteral(resourceName: "imgDefaultApp")
 
       newApp = App(id: id, name: name, icon: icon, store: store, rating: rating)
@@ -36,7 +38,7 @@ final class ParseManager {
     } else {
       print("No app id and no error message returned from json.")
     }
-    
+
     return newApp
   }
 
