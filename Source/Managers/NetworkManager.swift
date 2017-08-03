@@ -22,8 +22,15 @@ final class NetworkManager {
    */
   class func fetchAppOverview(appId: Int, completionHandler: @escaping (App?) -> Void) {
 
-    // TODO: I think there's an authentication issue here
-    // So it always returns no app, even though in the browser the same URL returns an app
+    // MARK: Network call to AppFigures (not working)
+
+    // TODO: There is an authentication issue here
+    // It always returns an error message from App Figures (which counts as data)
+    // Need to fix the `urlString` that is passed to Alamofire
+    // I tried to do this with an Authentiation Manager but I got stuck with OAuth1
+    // So for now I am using a stub
+
+    /*
     let clientKey = "6cc908cce44e492f844fd7921b953878"
     let urlStringStart = "https://api.appfigures.com/v2/products/"
     let urlStringEnd = "?client_key="
@@ -44,6 +51,7 @@ final class NetworkManager {
         print("No data returned from network call")
       }
     }
+    */
   }
 
 }
