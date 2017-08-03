@@ -11,5 +11,7 @@ import Foundation
 protocol HomeViewModelDelegate: class {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String)
-  
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppNameTo name: String)
+
 }

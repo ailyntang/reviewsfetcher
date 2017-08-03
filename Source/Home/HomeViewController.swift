@@ -41,6 +41,11 @@ extension HomeViewController: HomeViewModelDelegate {
       activityIndicator.stopAnimating()
     }
   }
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppNameTo name: String) {
+    
+  }
+
 }
 
 // MARK: - Private Methods
