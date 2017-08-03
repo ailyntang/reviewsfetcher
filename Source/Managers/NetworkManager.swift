@@ -52,6 +52,23 @@ final class NetworkManager {
       }
     }
     */
+
+    // MARK: Stub
+
+    // TODO: Remove this stub once I figure out OAuth 1
+
+    let url = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
+
+    var app = App()
+
+    do {
+      let data = try Data(contentsOf: url!)
+      let json = JSON(data: data)
+      app = ParseManager.parseAppOverview(from: json)
+      completionHandler(app)
+    } catch {
+      print(error.localizedDescription)
+    }
   }
 
 }
