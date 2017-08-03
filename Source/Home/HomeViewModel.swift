@@ -40,7 +40,8 @@ extension HomeViewModel: HomeViewModelType {
 
   func controllerDidAppear() {
     NetworkManager.fetchAppOverview(appId: Int(212243832), completionHandler: { app in
-      
+
+      self.delegate?.viewModel(self, didUpdateAppNameTo: app.name!)
     })
   }
 
