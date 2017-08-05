@@ -18,6 +18,8 @@ final class HomeViewController: UIViewController {
 
   fileprivate var appName: String?
 
+  fileprivate var appIcon: UIImage?
+
   // MARK: Lifecycle
 
   override func viewDidLoad() {
@@ -48,6 +50,10 @@ extension HomeViewController: HomeViewModelDelegate {
     appName = name
   }
 
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconTo icon: UIImage) {
+    appIcon = icon
+  }
+
 }
 
 // MARK: - Conformance: UITableViewDataSource
@@ -65,6 +71,11 @@ extension HomeViewController: UITableViewDataSource {
     if let name = appName {
       cell.setAppName(name: name)
     }
+
+    if let icon = appIcon {
+      cell.setAppIcon(icon: icon)
+    }
+//    cell.setupWithApp(app)
     return cell
   }
 

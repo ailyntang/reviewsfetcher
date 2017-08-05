@@ -33,4 +33,7 @@ final class HomeTableViewCell: UITableViewCell {
     appNameLabel.text = name
   }
 
+  func setAppIcon(icon: UIImage) {
+    appImageView.image = icon
+  }
 }
