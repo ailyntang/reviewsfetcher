@@ -10,7 +10,8 @@ import UIKit
 
 final class HomeTableViewCell: UITableViewCell {
   
-  //Properties
+  // MARK: IBOutlets
+
   @IBOutlet weak private var appImageView: UIImageView!
   @IBOutlet weak private var appNameLabel: UILabel!
   @IBOutlet weak private var appleAppStoreStarRatingLabel: UILabel!
@@ -18,24 +19,13 @@ final class HomeTableViewCell: UITableViewCell {
   
   // TODO: var appImage: UIImage. Not sure how this works.
   
-  var appName: String? {
-    didSet {
-      appNameLabel.text = appName
-    }
+  // MARK: Properties
+
+  var appName: String?
+  
+  var appleAppStoreStarRating: String?
+  
+  var googlePlayStoreStarRating: String?
   }
-  
-  var appleAppStoreStarRating: String? {
-    didSet {
-      appleAppStoreStarRatingLabel.text = appleAppStoreStarRating
-    }
-  }
-  
-  var googlePlayStoreStarRating: String? {
-    didSet {
-      googlePlayStoreStarRatingLabel.text = googlePlayStoreStarRating
-    }
-  }
-  
-  
-  
+
 }
