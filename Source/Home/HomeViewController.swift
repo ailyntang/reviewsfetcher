@@ -44,6 +44,25 @@ extension HomeViewController: HomeViewModelDelegate {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppNameTo name: String) {
     
+}
+
+// MARK: - Conformance: TableView
+
+extension HomeViewController: UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    let cellIdentifier = "HomeTableViewCell"
+
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
+      fatalError("The dequeued cell is not an instance of HomeTableViewCell")
+    }
+
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1
   }
 
 }
