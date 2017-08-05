@@ -1,5 +1,5 @@
 //
-//  UIImage+Extensions.swift
+//  String+Extensions.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 5/8/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImage {
+extension String {
 
   /**
    Takes a string and returns a UIImage.
@@ -17,11 +17,11 @@ extension UIImage {
    - returns: A UIImage based on the url string or a default image if the url string
    cannot be converted to an image.
   */
-  func fromUrlString(string: String) -> UIImage {
+  func convertToImage() -> UIImage {
 
     var image = #imageLiteral(resourceName: "imgDefaultApp")
 
-    if let url = URL(string: string) {
+    if let url = URL(string: self) {
       DispatchQueue.global(qos: .background).async {
         if let data = try? Data(contentsOf: url, options: NSData.ReadingOptions.uncached) {
           DispatchQueue.main.async {
