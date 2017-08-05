@@ -26,6 +26,11 @@ final class HomeTableViewCell: UITableViewCell {
   var appleAppStoreStarRating: String?
   
   var googlePlayStoreStarRating: String?
+
+  // MARK: Public Methods
+
+  func setAppName(name: String) {
+    appNameLabel.text = name
   }
 
 }
