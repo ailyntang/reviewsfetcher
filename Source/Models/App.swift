@@ -28,9 +28,10 @@ struct App {
   let name: String?
 
   /**
-   The icon used by the app in the app store and on the phone
+   The icon used by the app in the app store and on the phone.
+   This is a string of the url.
    */
-  let icon: UIImage?
+  let iconString: String?
 
   /**
    The store of the app. The possible values are `apple`, `google_play` and `amazon`.
@@ -47,13 +48,13 @@ struct App {
 
   init(id: Int? = nil,
        name: String? = nil,
-       icon: UIImage? = nil,
+       iconString: String? = nil,
        store: String? = nil,
        rating: Double? = nil) {
 
     self.id = id
     self.name = name
-    self.icon = icon
+    self.iconString = iconString
     self.store = store
     self.rating = rating
   }
