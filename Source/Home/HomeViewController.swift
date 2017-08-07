@@ -75,7 +75,7 @@ extension HomeViewController: UITableViewDataSource {
     if let urlString = appIconUrlString {
       cell.setAppIcon(urlString: urlString)
     }
-//    cell.setupWithApp(app)
+    
     return cell
   }
 
