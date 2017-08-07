@@ -17,20 +17,36 @@ extension String {
    - returns: A UIImage based on the url string or a default image if the url string
    cannot be converted to an image.
   */
-  func convertToImage() -> UIImage {
+  func convertToImage(with imageView: UIImageView) {
 
-    var image = #imageLiteral(resourceName: "imgDefaultApp")
+    let url = URL(string: self)
+    let session = URLSession(configuration: .default)
 
-    if let url = URL(string: self) {
-      DispatchQueue.global(qos: .background).async {
-        if let data = try? Data(contentsOf: url, options: NSData.ReadingOptions.uncached) {
-          DispatchQueue.main.async {
-            image = UIImage(data: data)!
+    let downloadImage = session.dataTask(with: url!) { (data, response, error) in
+
+      if let error = error {
+        print("Error downloading image: \(error)")
+
+      } else {
+
+        if let _ = response as? HTTPURLResponse {
+          if let imageData = data {
+
+            // Set UIImage
+            let image = UIImage(data: imageData)!
+            DispatchQueue.main.async(execute: {
+              imageView.image = image
+            })
+          } else {
+            print("Could not convert url data into an image")
           }
+
+        } else {
+          print("There was no response from the url")
         }
       }
     }
-    return image
+    downloadImage.resume()
   }
 
 }
