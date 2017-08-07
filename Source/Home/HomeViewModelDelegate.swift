@@ -14,6 +14,6 @@ protocol HomeViewModelDelegate: class {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppNameTo name: String)
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconTo icon: UIImage)
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconUrlStringTo urlString: String)
 
 }

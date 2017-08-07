@@ -18,7 +18,7 @@ final class HomeViewController: UIViewController {
 
   fileprivate var appName: String?
 
-  fileprivate var appIcon: UIImage?
+  fileprivate var appIconUrlString: String?
 
   // MARK: Lifecycle
 
@@ -50,8 +50,8 @@ extension HomeViewController: HomeViewModelDelegate {
     appName = name
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconTo icon: UIImage) {
-    appIcon = icon
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconUrlStringTo urlString: String) {
+    appIconUrlString = urlString
   }
 
 }
@@ -72,8 +72,8 @@ extension HomeViewController: UITableViewDataSource {
       cell.setAppName(name: name)
     }
 
-    if let icon = appIcon {
-      cell.setAppIcon(icon: icon)
+    if let urlString = appIconUrlString {
+      cell.setAppIcon(urlString: urlString)
     }
 //    cell.setupWithApp(app)
     return cell
