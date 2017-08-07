@@ -25,7 +25,7 @@ final class ParseManager {
       // TODO: delete rating from AppModel. It's not used here.
       let rating = 3.0
 
-      newApp = App(id: id, name: name, icon: iconString.convertToImage(), store: store, rating: rating)
+      newApp = App(id: id, name: name, iconString: iconString, store: store, rating: rating)
 
     } else if let errorMessage = json["message"].string {
 
