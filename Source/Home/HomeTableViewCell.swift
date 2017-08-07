@@ -17,8 +17,6 @@ final class HomeTableViewCell: UITableViewCell {
   @IBOutlet weak private var appleAppStoreStarRatingLabel: UILabel!
   @IBOutlet weak private var googlePlayStoreStarRatingLabel: UILabel!
   
-  // TODO: var appImage: UIImage. Not sure how this works.
-  
   // MARK: Properties
 
   var appName: String?
@@ -33,7 +31,8 @@ final class HomeTableViewCell: UITableViewCell {
     appNameLabel.text = name
   }
 
-  func setAppIcon(icon: UIImage) {
-    appImageView.image = icon
+  func setAppIcon(urlString: String) {
+    urlString.convertToImage(with: appImageView)
   }
+
 }
