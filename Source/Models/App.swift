@@ -39,6 +39,18 @@ struct App {
   let store: String?
 
   /**
+   The date string the app was released onto the app store.
+   The date format is "2014-10-22T00:00:00"
+   */
+  let releaseDate: String?
+
+  /**
+   The date string the app was released onto the app store.
+   The date format is "2014-10-22T00:00:00"
+   */
+  let updatedDate: String?
+
+  /**
    The average rating of the app in its app store.
    TBD whether this is for the most current version or for all time.
    */
@@ -50,13 +62,17 @@ struct App {
        name: String? = nil,
        iconString: String? = nil,
        store: String? = nil,
-       rating: Double? = nil) {
+       rating: Double? = nil,
+       releaseDate: String? = nil,
+       updatedDate: String? = nil) {
 
     self.id = id
     self.name = name
     self.iconString = iconString
     self.store = store
     self.rating = rating
+    self.releaseDate = releaseDate
+    self.updatedDate = updatedDate
   }
 
 }
