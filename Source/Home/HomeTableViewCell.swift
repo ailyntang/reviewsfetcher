@@ -14,9 +14,10 @@ final class HomeTableViewCell: UITableViewCell {
 
   @IBOutlet weak private var appImageView: UIImageView!
   @IBOutlet weak private var appNameLabel: UILabel!
-  @IBOutlet weak private var appleAppStoreStarRatingLabel: UILabel!
-  @IBOutlet weak private var googlePlayStoreStarRatingLabel: UILabel!
-  
+  @IBOutlet weak private var storeLabel: UILabel!
+  @IBOutlet weak private var releaseDateLabel: UILabel!
+  @IBOutlet weak private var updatedDateLabel: UILabel!
+
   // MARK: Properties
 
   var appName: String?

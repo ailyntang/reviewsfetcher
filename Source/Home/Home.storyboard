@@ -147,6 +147,9 @@
                                         <connections>
                                             <outlet property="appImageView" destination="t4U-rt-gjM" id="Rmd-fj-G0t"/>
                                             <outlet property="appNameLabel" destination="KBK-4G-xBl" id="RUj-Ee-cSm"/>
+                                            <outlet property="releaseDateLabel" destination="IR9-vN-8Kj" id="MXz-AJ-64u"/>
+                                            <outlet property="storeLabel" destination="2oA-OS-qpt" id="cF0-ck-lmi"/>
+                                            <outlet property="updatedDateLabel" destination="LLi-nk-6NJ" id="KTD-RA-4DQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
