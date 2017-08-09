@@ -24,6 +24,8 @@ final class HomeTableViewCell: UITableViewCell {
     app.iconString?.convertToImage(with: appImageView)
     appNameLabel.text = app.name
     storeLabel.text = app.store
+    releaseDateLabel.text = app.releaseDate
+    updatedDateLabel.text = app.updatedDate
   }
 
 }
