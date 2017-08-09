@@ -55,7 +55,7 @@ final class NetworkManager {
 
     // MARK: Stub
 
-    // TODO: Remove this stub once I figure out OAuth 1
+    // TODO: Remove this stub once I figure out OAuth 1. Right now it's dummy data.
 
     let url = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
 
