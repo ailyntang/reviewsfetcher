@@ -21,7 +21,7 @@ final class ParseManager {
       let name = json["name"].stringValue
       let iconString = json["icon"].stringValue
       let store = json["store"].stringValue
-      let releaseDate = json["released_date"].stringValue
+      let releaseDate = json["release_date"].stringValue
       let updatedDate = json["updated_date"].stringValue
 
       // TODO: delete rating from AppModel. It's not used here.
