@@ -46,14 +46,7 @@ extension HomeViewController: HomeViewModelDelegate {
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
-
-    self.app = App(id: app.id,
-                   name: app.name,
-                   iconString: app.iconString,
-                   store: app.store,
-                   rating: app.rating,
-                   releaseDate: app.releaseDate,
-                   updatedDate: app.updatedDate)
+    self.app = app
   }
 
 }
