@@ -24,7 +24,7 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [Int]?
+  fileprivate var listOfAppIds: [Int]? = [1,2,3]
 
   // MARK: Initialisation
 
@@ -39,10 +39,32 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelType {
 
   func controllerDidAppear() {
-
-    NetworkManager.fetchAppOverview(appId: Int(212243832), completionHandler: { app in
-      self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
-    })
+    loadSampleApps(appIds: listOfAppIds)
   }
 
+}
+
+// MARK: - Private Methods
+
+private extension HomeViewModel {
+
+  func loadSampleApps(appIds: [Int]?) {
+
+    if let appIds = appIds {
+
+      //TODO: write for loop here
+      loadApp(appId: 342)
+      
+    } else {
+      print("There are no saved apps to display - add an app")
+    }
+  }
+
+  func loadApp(appId: Int) {
+
+    NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
+      self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+    })
+
+  }
 }
