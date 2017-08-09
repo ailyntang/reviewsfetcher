@@ -57,7 +57,6 @@ extension HomeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
     let cellIdentifier = "HomeTableViewCell"
-
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
       fatalError("The dequeued cell is not an instance of HomeTableViewCell")
     }
@@ -75,6 +74,12 @@ extension HomeViewController: UITableViewDataSource {
 
 }
 
+// MARK: - Conformance: UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+
+}
+
 // MARK: - Private Methods
 
 private extension HomeViewController {
@@ -85,4 +90,5 @@ private extension HomeViewController {
     activityIndicator.activityIndicatorViewStyle = .gray
     view.addSubview(activityIndicator)
   }
+
 }
