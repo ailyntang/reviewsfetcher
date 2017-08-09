@@ -16,8 +16,7 @@ final class HomeViewController: UIViewController {
 
   fileprivate var activityIndicator = UIActivityIndicatorView()
 
-  fileprivate var app: App?
-
+  fileprivate var apps: [App] = []
 
   // MARK: Lifecycle
 
@@ -46,7 +45,7 @@ extension HomeViewController: HomeViewModelDelegate {
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
-    self.app = app
+    self.apps.append(app)
   }
 
 }
@@ -63,8 +62,9 @@ extension HomeViewController: UITableViewDataSource {
       fatalError("The dequeued cell is not an instance of HomeTableViewCell")
     }
 
-
-    cell.setupApp(app: app!)
+    // Fetches the approporiate app for the data source layout
+    let app = apps[indexPath.row]
+    cell.setupApp(app: app)
     
     return cell
   }
