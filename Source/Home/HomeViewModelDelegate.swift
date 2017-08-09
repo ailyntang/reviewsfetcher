@@ -12,10 +12,6 @@ protocol HomeViewModelDelegate: class {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String)
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppNameTo name: String)
-
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppIconUrlStringTo urlString: String)
-
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App)
 
 }
