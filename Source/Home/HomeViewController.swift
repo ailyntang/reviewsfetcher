@@ -54,6 +54,10 @@ extension HomeViewController: HomeViewModelDelegate {
     appIconUrlString = urlString
   }
 
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
+
+  }
+
 }
 
 // MARK: - Conformance: UITableViewDataSource
