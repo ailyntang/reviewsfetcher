@@ -24,7 +24,7 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [Int]? = [1,2,3]
+  fileprivate var listOfAppIds: [Int]?
 
   // MARK: Initialisation
 
