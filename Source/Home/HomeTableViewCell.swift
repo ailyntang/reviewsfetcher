@@ -18,14 +18,6 @@ final class HomeTableViewCell: UITableViewCell {
   @IBOutlet weak private var releaseDateLabel: UILabel!
   @IBOutlet weak private var updatedDateLabel: UILabel!
 
-  // MARK: Properties
-
-  var appName: String?
-  
-  var appleAppStoreStarRating: String?
-  
-  var googlePlayStoreStarRating: String?
-
   // MARK: Public Methods
 
   func setAppName(name: String) {
