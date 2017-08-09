@@ -24,11 +24,11 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [String]?
+  fileprivate var listOfAppIds: [Int]?
 
   // MARK: Initialisation
 
-  init(with listOfAppIds: [String]) {
+  init(with listOfAppIds: [Int]) {
     self.listOfAppIds = listOfAppIds
   }
 
