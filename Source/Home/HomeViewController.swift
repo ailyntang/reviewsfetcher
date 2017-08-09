@@ -55,7 +55,8 @@ extension HomeViewController: HomeViewModelDelegate {
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
-
+    appName = app.name
+    appIconUrlString = app.iconString
   }
 
 }

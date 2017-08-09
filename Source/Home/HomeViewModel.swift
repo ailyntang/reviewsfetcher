@@ -43,6 +43,7 @@ extension HomeViewModel: HomeViewModelType {
     NetworkManager.fetchAppOverview(appId: Int(212243832), completionHandler: { app in
       self.delegate?.viewModel(self, didUpdateAppNameTo: app.name!)
       self.delegate?.viewModel(self, didUpdateAppIconUrlStringTo: app.iconString!)
+      self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
     })
   }
 
