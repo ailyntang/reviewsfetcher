@@ -18,14 +18,24 @@ final class HomeTableViewCell: UITableViewCell {
   @IBOutlet weak private var releaseDateLabel: UILabel!
   @IBOutlet weak private var updatedDateLabel: UILabel!
 
+  // MARK: Properties
+
+  fileprivate let dateFormatter = DateFormatter()
+
   // MARK: Public Methods
 
   func setupApp(app: App) {
     app.iconString?.convertToImage(with: appImageView)
     appNameLabel.text = app.name
     storeLabel.text = app.store
-    releaseDateLabel.text = app.releaseDate
-    updatedDateLabel.text = app.updatedDate
+
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    let releaseDate = dateFormatter.date(from: app.releaseDate!)
+    let updatedDate = dateFormatter.date(from: app.updatedDate!)
+
+    dateFormatter.dateFormat = "dd MMM yyyy"
+    releaseDateLabel.text = dateFormatter.string(from: releaseDate!)
+    updatedDateLabel.text = dateFormatter.string(from: updatedDate!)
   }
 
 }
