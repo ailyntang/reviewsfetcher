@@ -39,7 +39,7 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelType {
 
   func controllerDidAppear() {
-    loadSampleApps(appIds: listOfAppIds)
+    loadApps(appIds: listOfAppIds)
   }
 
 }
@@ -48,13 +48,12 @@ extension HomeViewModel: HomeViewModelType {
 
 private extension HomeViewModel {
 
-  func loadSampleApps(appIds: [Int]?) {
+  func loadApps(appIds: [Int]?) {
 
     if let appIds = appIds {
-
-      //TODO: write for loop here
-      loadApp(appId: 342)
-      
+      for id in appIds {
+        loadApp(appId: id)
+      }
     } else {
       print("There are no saved apps to display - add an app")
     }
@@ -65,6 +64,5 @@ private extension HomeViewModel {
     NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
       self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
     })
-
   }
 }
