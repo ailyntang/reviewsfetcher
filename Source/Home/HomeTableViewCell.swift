@@ -20,12 +20,10 @@ final class HomeTableViewCell: UITableViewCell {
 
   // MARK: Public Methods
 
-  func setAppName(name: String) {
-    appNameLabel.text = name
-  }
-
-  func setAppIcon(urlString: String) {
-    urlString.convertToImage(with: appImageView)
+  func setupApp(app: App) {
+    app.iconString?.convertToImage(with: appImageView)
+    appNameLabel.text = app.name
+    storeLabel.text = app.store
   }
 
 }
