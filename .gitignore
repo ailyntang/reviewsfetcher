@@ -8,3 +8,6 @@ DerivedData/
 ## Various settings
 *.pbxuser
 xcuserdata/
+
+## Specific files
+AuthenticationSecrets.swift
