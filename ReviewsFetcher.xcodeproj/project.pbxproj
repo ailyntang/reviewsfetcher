@@ -23,6 +23,7 @@
 		6A6E50481EF0987100ED1A1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E50401EF0987100ED1A1C /* Assets.xcassets */; };
 		6A6E50491EF0987100ED1A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E50421EF0987100ED1A1C /* AppDelegate.swift */; };
 		6A6E504B1EF0987100ED1A1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E50451EF0987100ED1A1C /* LaunchScreen.storyboard */; };
+		6A7A061E1F3D00DC006ED051 /* AuthenticationSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A061D1F3D00DC006ED051 /* AuthenticationSecrets.swift */; };
 		6AB5023E1EF5EDBB0045C674 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */; };
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
@@ -69,6 +70,7 @@
 		6A6E50421EF0987100ED1A1C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6E50441EF0987100ED1A1C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A6E50451EF0987100ED1A1C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A7A061D1F3D00DC006ED051 /* AuthenticationSecrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSecrets.swift; sourceTree = "<group>"; };
 		6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		6AB5023F1EF664550045C674 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 				6A6E50441EF0987100ED1A1C /* Info.plist */,
 				6A6E50451EF0987100ED1A1C /* LaunchScreen.storyboard */,
 				6A3DDF831F327C41002EA965 /* StubAppOverview.json */,
+				6A7A061D1F3D00DC006ED051 /* AuthenticationSecrets.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				6A2AC1421F2A8E0300FE0C71 /* NetworkManager.swift in Sources */,
 				6A1B07F81F1A292400CFEE89 /* HomeViewModel.swift in Sources */,
 				6AB5023E1EF5EDBB0045C674 /* HomeTableViewCell.swift in Sources */,
+				6A7A061E1F3D00DC006ED051 /* AuthenticationSecrets.swift in Sources */,
 				6AB502401EF664550045C674 /* App.swift in Sources */,
 				6A6E50491EF0987100ED1A1C /* AppDelegate.swift in Sources */,
 				6A1B08041F1B53B300CFEE89 /* HomeViewModelDelegate.swift in Sources */,
