@@ -1,24 +1,21 @@
 PODS:
   - Alamofire (4.3.0)
   - Nimble (6.0.1)
-  - OAuthSwift (1.1.0)
   - Quick (1.0.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - Nimble
-  - OAuthSwift (~> 1.1.0)
   - Quick
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
-  OAuthSwift: 7ec2c62274f6bdc30b1ba3b799c39a6fdcaea0e5
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b0c8c605f8c29ac62dfbf315b66a40ba60f892af
+PODFILE CHECKSUM: 384deb80640ba7dc43b0182566d89225dee5da5e
 
 COCOAPODS: 1.2.0

@@ -22,5 +22,4 @@ end
 target 'ReviewsFetcher' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
-  pod 'OAuthSwift', '~> 1.1.0'
 end
