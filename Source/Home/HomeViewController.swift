@@ -59,8 +59,11 @@ extension HomeViewController: HomeViewModelDelegate {
 
 extension HomeViewController: UITableViewDataSource {
 
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return apps.count
+  }
 
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cellIdentifier = "HomeTableViewCell"
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
       fatalError("The dequeued cell is not an instance of HomeTableViewCell")
@@ -71,10 +74,6 @@ extension HomeViewController: UITableViewDataSource {
     cell.setupApp(app: app)
     
     return cell
-  }
-
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return apps.count
   }
 
 }
