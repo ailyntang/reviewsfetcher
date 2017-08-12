@@ -18,6 +18,10 @@ final class HomeViewController: UIViewController {
 
   fileprivate var apps: [App] = []
 
+  // MARK: IBOutlets
+
+  @IBOutlet weak fileprivate var tableView: UITableView!
+
   // MARK: Lifecycle
 
   override func viewDidLoad() {
