@@ -50,6 +50,7 @@ extension HomeViewController: HomeViewModelDelegate {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
     self.apps.append(app)
+    self.tableView.reloadData()
   }
 
 }
