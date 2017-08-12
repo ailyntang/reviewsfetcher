@@ -169,6 +169,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="N6Q-ca-uww" secondAttribute="trailing" id="hzb-uX-57b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="N6Q-ca-uww" id="ssD-3n-QUT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
