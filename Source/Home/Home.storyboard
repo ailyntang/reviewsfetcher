@@ -52,7 +52,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-4G-xBl">
-                                                    <rect key="frame" x="104" y="14" width="150" height="18"/>
+                                                    <rect key="frame" x="104" y="16" width="150" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="cga-sY-LEX"/>
                                                     </constraints>
@@ -61,7 +61,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="10v-5X-RJx">
-                                                    <rect key="frame" x="104" y="46" width="216" height="45.5"/>
+                                                    <rect key="frame" x="104" y="48" width="216" height="45.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="twc-64-Ri8">
                                                             <rect key="frame" x="0.0" y="0.0" width="216" height="14.5"/>
@@ -136,12 +136,12 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="10v-5X-RJx" secondAttribute="bottom" constant="10" id="HKi-zC-Vq0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="10v-5X-RJx" secondAttribute="bottom" constant="8" id="HKi-zC-Vq0"/>
                                                 <constraint firstItem="t4U-rt-gjM" firstAttribute="leading" secondItem="qv3-dU-72h" secondAttribute="leading" id="QIM-Dl-1d1"/>
                                                 <constraint firstItem="t4U-rt-gjM" firstAttribute="centerY" secondItem="qv3-dU-72h" secondAttribute="centerY" id="e02-zJ-gOu"/>
                                                 <constraint firstItem="10v-5X-RJx" firstAttribute="leading" secondItem="t4U-rt-gjM" secondAttribute="trailing" constant="14" id="mpx-sy-7UD"/>
                                                 <constraint firstItem="KBK-4G-xBl" firstAttribute="leading" secondItem="t4U-rt-gjM" secondAttribute="trailing" constant="14" id="nYC-N5-RDG"/>
-                                                <constraint firstItem="KBK-4G-xBl" firstAttribute="top" secondItem="qv3-dU-72h" secondAttribute="top" constant="14" id="zHl-26-MTa"/>
+                                                <constraint firstItem="KBK-4G-xBl" firstAttribute="top" secondItem="qv3-dU-72h" secondAttribute="top" constant="16" id="zHl-26-MTa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
