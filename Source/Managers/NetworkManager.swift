@@ -22,27 +22,25 @@ final class NetworkManager {
    */
   class func fetchAppOverview(appId: Int, completionHandler: @escaping (App) -> Void) {
 
-    // MARK: Network call to AppFigures (not working)
+    let urlBaseString = "https://api.appfigures.com/v2/products/"
+    let urlString = "\(urlBaseString)\(appId)"
 
-    // TODO: There is an authentication issue here
-    // It always returns an error message from App Figures (which counts as data)
-    // Need to fix the `urlString` that is passed to Alamofire
-    // I tried to do this with an Authentiation Manager but I got stuck with OAuth1
-    // So for now I am using a stub
+    let url = URL(string: urlString)!
+    var request = URLRequest(url: url)
 
-    /*
-    let clientKey = "6cc908cce44e492f844fd7921b953878"
-    let urlStringStart = "https://api.appfigures.com/v2/products/"
-    let urlStringEnd = "?client_key="
+    let authentication = AuthenticationSecrets()
+    let authCredentials = "\(authentication.username):\(authentication.password)"
+    let authData = authCredentials.data(using: String.Encoding.utf8)
+    let authVal = authData!.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters)
 
-    let urlString = "\(urlStringStart)\(appId)\(urlStringEnd)\(clientKey)"
+    request.setValue("Basic \(authVal)", forHTTPHeaderField: "Authorization")
+    request.setValue(authentication.clientKey, forHTTPHeaderField: "X-Client-Key")
+    request.httpMethod = "GET"
 
-    Alamofire.request(urlString).responseData{ dataResponse in
-
+    Alamofire.request(request).responseData{ dataResponse in
       var app = App()
       
       if let data = dataResponse.result.value {
-
         let json = JSON(data: data)
         app = ParseManager.parseAppOverview(from: json)
         completionHandler(app)
@@ -51,8 +49,9 @@ final class NetworkManager {
         print("No data returned from network call")
       }
     }
-    */
+  }
 
+}
     // MARK: Stub
 
     // TODO: Remove this stub once I figure out OAuth 1. Right now it's dummy data.
