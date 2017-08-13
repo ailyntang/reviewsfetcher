@@ -60,9 +60,11 @@ private extension HomeViewModel {
   }
 
   func loadApp(appId: Int) {
+    self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
 
     NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
       self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+      self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
     })
   }
 }
