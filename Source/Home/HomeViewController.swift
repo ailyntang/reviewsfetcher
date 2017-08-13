@@ -22,6 +22,8 @@ final class HomeViewController: UIViewController {
 
   @IBOutlet weak fileprivate var tableView: UITableView!
 
+  @IBOutlet weak fileprivate var emptyListLabel: UILabel!
+
   // MARK: Lifecycle
 
   override func viewDidLoad() {
