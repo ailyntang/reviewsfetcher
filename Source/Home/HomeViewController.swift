@@ -61,7 +61,10 @@ extension HomeViewController: HomeViewModelDelegate {
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
-
+    if self.apps.count > 0 {
+      self.apps.sort(by: { $0.name! < $1.name! } )
+      self.tableView.reloadData()
+    }
   }
 
 }

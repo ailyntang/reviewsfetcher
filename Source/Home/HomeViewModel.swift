@@ -61,6 +61,7 @@ private extension HomeViewModel {
 
     NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
       self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+      self.delegate?.viewModel(self, didSortListBy: "name")
       self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
     })
   }
