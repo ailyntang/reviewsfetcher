@@ -54,7 +54,7 @@ extension HomeViewController: HomeViewModelDelegate {
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
-
+    self.tableView.isHidden = !isListAvailable
   }
 
 }
