@@ -24,13 +24,7 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [Int]?
-
-  // MARK: Initialisation
-
-  init(with listOfAppIds: [Int]) {
-    self.listOfAppIds = listOfAppIds
-  }
+  fileprivate var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1]
 
 }
 
