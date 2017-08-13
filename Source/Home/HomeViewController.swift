@@ -60,7 +60,7 @@ extension HomeViewController: HomeViewModelDelegate {
     self.emptyListLabel.isHidden = isListAvailable
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateListSortOrderTo sortOrder: String) {
+  func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
 
   }
 
