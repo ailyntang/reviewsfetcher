@@ -25,7 +25,13 @@ final class HomeTableViewCell: UITableViewCell {
   // MARK: Public Methods
 
   func setupApp(app: App) {
-    app.iconString?.convertToImage(with: appImageView)
+
+    if let iconString = app.iconString {
+      iconString.convertToImage(with: appImageView)
+    } else {
+      appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
+    }
+    
     appNameLabel.text = app.name
     storeLabel.text = app.store
 
