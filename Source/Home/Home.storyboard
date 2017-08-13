@@ -156,15 +156,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Xsa-MQ-anH"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No apps found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uC-0U-aDA">
+                                <rect key="frame" x="87.5" y="323" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="58h-pp-UlT"/>
+                                    <constraint firstAttribute="width" constant="200" id="WR3-Mn-87Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4uC-0U-aDA" firstAttribute="top" secondItem="Xpd-1u-BmT" secondAttribute="bottom" constant="223" id="3JK-YO-SaI"/>
                             <constraint firstItem="N6Q-ca-uww" firstAttribute="top" secondItem="Xpd-1u-BmT" secondAttribute="bottom" constant="71" id="3MG-eU-rBW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N6Q-ca-uww" secondAttribute="bottom" id="9XQ-P0-Ftv"/>
                             <constraint firstItem="N6Q-ca-uww" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jyu-4j-Qhj"/>
                             <constraint firstItem="Xpd-1u-BmT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="cDb-qa-DiB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Xpd-1u-BmT" secondAttribute="leading" id="g3Y-zT-S2X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N6Q-ca-uww" secondAttribute="trailing" id="hzb-uX-57b"/>
+                            <constraint firstItem="4uC-0U-aDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tv4-S9-DCJ"/>
                         </constraints>
                     </view>
                     <connections>
