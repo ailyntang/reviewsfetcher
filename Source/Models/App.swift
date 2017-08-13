@@ -9,22 +9,70 @@
 import Foundation
 import SwiftyJSON
 
+/**
+ The `App` model contains information about a given app live in an app store.
+ */
 struct App {
-  
-  let appIcon: UIImageView
-  let appName: String
-  let appId: Int
-  let appleAppStoreStarRating: String
-  let googlePlayStoreStarRating: String
 
-  func parseDataFromJson(json: JSON) -> [App] {
-    var newApps: [App]? = []
+  // MARK: Public Properties
 
-    if let arrayOfAllAttributes = json["results"].array {
-      for app in arrayOfAllAttributes {
-      }
-    }
+  /**
+   `id` refers to the product id from App Figures. 
+   This is different to the product id from iTunes or the Google Play Store.
+  */
+  let id: Int?
 
-    return newApps!
+  /**
+   The name of the app in the app store
+   */
+  let name: String?
+
+  /**
+   The icon used by the app in the app store and on the phone.
+   This is a string of the url.
+   */
+  let iconString: String?
+
+  /**
+   The store of the app. The possible values are `apple`, `google_play` and `amazon`.
+   */
+  let store: String?
+
+  /**
+   The date string the app was released onto the app store.
+   The date format is "2014-10-22T00:00:00"
+   */
+  let releaseDate: String?
+
+  /**
+   The date string the app was released onto the app store.
+   The date format is "2014-10-22T00:00:00"
+   */
+  let updatedDate: String?
+
+  /**
+   The average rating of the app in its app store.
+   TBD whether this is for the most current version or for all time.
+   */
+  let rating: Double?
+
+  // MARK: Initialisation
+
+  init(id: Int? = nil,
+       name: String? = nil,
+       iconString: String? = nil,
+       store: String? = nil,
+       rating: Double? = nil,
+       releaseDate: String? = nil,
+       updatedDate: String? = nil) {
+
+    self.id = id
+    self.name = name
+    self.iconString = iconString
+    self.store = store
+    self.rating = rating
+    self.releaseDate = releaseDate
+    self.updatedDate = updatedDate
   }
+
 }

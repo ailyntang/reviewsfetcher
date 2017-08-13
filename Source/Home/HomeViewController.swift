@@ -16,12 +16,18 @@ final class HomeViewController: UIViewController {
 
   fileprivate var activityIndicator = UIActivityIndicatorView()
 
+  fileprivate var apps: [App] = []
+
+  // MARK: IBOutlets
+
+  @IBOutlet weak fileprivate var tableView: UITableView!
+
   // MARK: Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = HomeViewModel(with: ["8968"])
+    viewModel = HomeViewModel(with: [264519898208, 212243832, 40332083066, 1])
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
     }
@@ -41,6 +47,41 @@ extension HomeViewController: HomeViewModelDelegate {
       activityIndicator.stopAnimating()
     }
   }
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
+    self.apps.append(app)
+    self.tableView.reloadData()
+  }
+
+}
+
+// MARK: - Conformance: UITableViewDataSource
+
+extension HomeViewController: UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return apps.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cellIdentifier = "HomeTableViewCell"
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else {
+      fatalError("The dequeued cell is not an instance of HomeTableViewCell")
+    }
+
+    // Fetches the approporiate app for the data source layout
+    let app = apps[indexPath.row]
+    cell.setupApp(app: app)
+    
+    return cell
+  }
+
+}
+
+// MARK: - Conformance: UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+
 }
 
 // MARK: - Private Methods
@@ -53,4 +94,5 @@ private extension HomeViewController {
     activityIndicator.activityIndicatorViewStyle = .gray
     view.addSubview(activityIndicator)
   }
+
 }

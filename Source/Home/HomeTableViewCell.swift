@@ -10,32 +10,38 @@ import UIKit
 
 final class HomeTableViewCell: UITableViewCell {
   
-  //Properties
+  // MARK: IBOutlets
+
   @IBOutlet weak private var appImageView: UIImageView!
   @IBOutlet weak private var appNameLabel: UILabel!
-  @IBOutlet weak private var appleAppStoreStarRatingLabel: UILabel!
-  @IBOutlet weak private var googlePlayStoreStarRatingLabel: UILabel!
-  
-  // TODO: var appImage: UIImage. Not sure how this works.
-  
-  var appName: String? {
-    didSet {
-      appNameLabel.text = appName
+  @IBOutlet weak private var storeLabel: UILabel!
+  @IBOutlet weak private var releaseDateLabel: UILabel!
+  @IBOutlet weak private var updatedDateLabel: UILabel!
+
+  // MARK: Properties
+
+  fileprivate let dateFormatter = DateFormatter()
+
+  // MARK: Public Methods
+
+  func setupApp(app: App) {
+
+    if let iconString = app.iconString {
+      iconString.convertToImage(with: appImageView)
+    } else {
+      appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
     }
+    
+    appNameLabel.text = app.name
+    storeLabel.text = app.store
+
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    let releaseDate = dateFormatter.date(from: app.releaseDate!)
+    let updatedDate = dateFormatter.date(from: app.updatedDate!)
+
+    dateFormatter.dateFormat = "dd MMM yyyy"
+    releaseDateLabel.text = dateFormatter.string(from: releaseDate!)
+    updatedDateLabel.text = dateFormatter.string(from: updatedDate!)
   }
-  
-  var appleAppStoreStarRating: String? {
-    didSet {
-      appleAppStoreStarRatingLabel.text = appleAppStoreStarRating
-    }
-  }
-  
-  var googlePlayStoreStarRating: String? {
-    didSet {
-      googlePlayStoreStarRatingLabel.text = googlePlayStoreStarRating
-    }
-  }
-  
-  
-  
+
 }

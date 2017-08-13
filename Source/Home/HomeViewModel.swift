@@ -24,11 +24,11 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [String]?
+  fileprivate var listOfAppIds: [Int]?
 
   // MARK: Initialisation
 
-  init(with listOfAppIds: [String]) {
+  init(with listOfAppIds: [Int]) {
     self.listOfAppIds = listOfAppIds
   }
 
@@ -39,32 +39,30 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelType {
 
   func controllerDidAppear() {
-
-    fetchApps(appIds: listOfAppIds!, completionHandler: { myApp in
-      self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
-    })
+    loadApps(appIds: listOfAppIds)
   }
 
 }
 
 // MARK: - Private Methods
+
 private extension HomeViewModel {
 
-  func fetchApps(appIds: [String], completionHandler: @escaping (Void) -> Void) {
+  func loadApps(appIds: [Int]?) {
 
-    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
-
-    let urlString = "http://swapi.co/api/people/"
-    Alamofire.request(urlString).responseData{ dataResponse in
-
-      if let data = dataResponse.result.value {
-        let json = JSON(data: data)
-        let arrayOfApps = ["23432"]
-        print("Woo hoo! \(arrayOfApps)")
-
-        completionHandler()
+    if let appIds = appIds {
+      for id in appIds {
+        loadApp(appId: id)
       }
+    } else {
+      print("There are no saved apps to display - add an app")
     }
   }
 
+  func loadApp(appId: Int) {
+
+    NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
+      self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+    })
+  }
 }
