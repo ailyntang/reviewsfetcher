@@ -39,9 +39,24 @@ final class ParseManager {
 
       // TODO: Make this log an error in the debug log (see safefood)
       print("Error: \(errorMessage)")
+      newApp = App(id: nil,
+                   name: "Error: unexpected app id",
+                   iconString: nil,
+                   store: "n/a",
+                   rating: 3.0,
+                   releaseDate: "1900-01-01T00:00:00",
+                   updatedDate: "1900-01-01T00:00:00")
 
     } else {
-      print("No app id and no error message returned from json.")
+      print("No app id and no error message returned from json. Not sure when we would get here.")
+
+      newApp = App(id: nil,
+                   name: "Unknown error from App Figures API",
+                   iconString: nil,
+                   store: "n/a",
+                   rating: 3.0,
+                   releaseDate: "1900-01-01T00:00:00",
+                   updatedDate: "1900-01-01T00:00:00")
     }
 
     return newApp
