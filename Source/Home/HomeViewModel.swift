@@ -43,13 +43,16 @@ extension HomeViewModel: HomeViewModelType {
 private extension HomeViewModel {
 
   func loadApps(appIds: [Int]?) {
+    self.delegate?.viewModel(self, didUpdateIsListAvailableTo: true)
 
     if let appIds = appIds {
       for id in appIds {
         loadApp(appId: id)
       }
+
     } else {
       print("There are no saved apps to display - add an app")
+      self.delegate?.viewModel(self, didUpdateIsListAvailableTo: false)
     }
   }
 

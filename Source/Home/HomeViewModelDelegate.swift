@@ -14,4 +14,6 @@ protocol HomeViewModelDelegate: class {
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App)
 
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool)
+  
 }

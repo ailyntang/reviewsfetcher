@@ -53,6 +53,10 @@ extension HomeViewController: HomeViewModelDelegate {
     self.tableView.reloadData()
   }
 
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+
+  }
+
 }
 
 // MARK: - Conformance: UITableViewDataSource
