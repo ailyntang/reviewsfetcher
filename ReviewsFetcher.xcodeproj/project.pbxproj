@@ -15,7 +15,6 @@
 		6A1B08061F1C673700CFEE89 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B08051F1C673700CFEE89 /* AppTests.swift */; };
 		6A2AC1421F2A8E0300FE0C71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC1411F2A8E0300FE0C71 /* NetworkManager.swift */; };
 		6A2AC1441F2A907000FE0C71 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC1431F2A907000FE0C71 /* ParseManager.swift */; };
-		6A3DDF841F327C41002EA965 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A3DDF831F327C41002EA965 /* StubAppOverview.json */; };
 		6A3DDF871F3598C8002EA965 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DDF861F3598C8002EA965 /* String+Extensions.swift */; };
 		6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E503B1EF0987100ED1A1C /* Home.storyboard */; };
 		6A6E50471EF0987100ED1A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E503C1EF0987100ED1A1C /* HomeViewController.swift */; };
@@ -27,6 +26,7 @@
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
 		6AD8CBFF1F424B2800658A90 /* ParseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */; };
+		6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC041F4255CC00658A90 /* StubAppOverview.json */; };
 		A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */; };
 		DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,6 @@
 		6A1B08051F1C673700CFEE89 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		6A2AC1411F2A8E0300FE0C71 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6A2AC1431F2A907000FE0C71 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
-		6A3DDF831F327C41002EA965 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
 		6A3DDF861F3598C8002EA965 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		6A6E50241EEFDDCD00ED1A1C /* ReviewsFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewsFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6E503B1EF0987100ED1A1C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherUITests.swift; sourceTree = "<group>"; };
 		6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManagerTests.swift; sourceTree = "<group>"; };
+		6AD8CC041F4255CC00658A90 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
 		9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,9 +219,9 @@
 		6A6E50431EF0987100ED1A1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6AD8CC031F4255CC00658A90 /* JsonStubs */,
 				6A6E50441EF0987100ED1A1C /* Info.plist */,
 				6A6E50451EF0987100ED1A1C /* LaunchScreen.storyboard */,
-				6A3DDF831F327C41002EA965 /* StubAppOverview.json */,
 				6A7A061D1F3D00DC006ED051 /* AuthenticationSecrets.swift */,
 			);
 			path = "Supporting Files";
@@ -245,6 +245,14 @@
 				6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */,
 			);
 			path = ReviewsFetcherUITests;
+			sourceTree = "<group>";
+		};
+		6AD8CC031F4255CC00658A90 /* JsonStubs */ = {
+			isa = PBXGroup;
+			children = (
+				6AD8CC041F4255CC00658A90 /* StubAppOverview.json */,
+			);
+			path = JsonStubs;
 			sourceTree = "<group>";
 		};
 		E775F9B74DDE8C62B84411C5 /* Frameworks */ = {
@@ -375,8 +383,8 @@
 			files = (
 				6A6E504B1EF0987100ED1A1C /* LaunchScreen.storyboard in Resources */,
 				6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */,
-				6A3DDF841F327C41002EA965 /* StubAppOverview.json in Resources */,
 				6A6E50481EF0987100ED1A1C /* Assets.xcassets in Resources */,
+				6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
