@@ -50,19 +50,12 @@ struct App {
    */
   let updatedDate: String?
 
-  /**
-   The average rating of the app in its app store.
-   TBD whether this is for the most current version or for all time.
-   */
-  let rating: Double?
-
   // MARK: Initialisation
 
   init(id: Int? = nil,
        name: String? = nil,
        iconString: String? = nil,
        store: String? = nil,
-       rating: Double? = nil,
        releaseDate: String? = nil,
        updatedDate: String? = nil) {
 
@@ -70,7 +63,6 @@ struct App {
     self.name = name
     self.iconString = iconString
     self.store = store
-    self.rating = rating
     self.releaseDate = releaseDate
     self.updatedDate = updatedDate
   }

@@ -23,7 +23,6 @@ final class AppTests: QuickSpec {
       let name = "Coles App"
       let iconString = "url"
       let store = "apple"
-      let rating = 3.8
       let releaseDate = "2017-07-01"
       let updatedDate = "2017-08-01"
 
@@ -37,7 +36,6 @@ final class AppTests: QuickSpec {
         expect(app.name).to(beNil())
         expect(app.iconString).to(beNil())
         expect(app.store).to(beNil())
-        expect(app.rating).to(beNil())
         expect(app.releaseDate).to(beNil())
         expect(app.updatedDate).to(beNil())
       }
@@ -49,7 +47,6 @@ final class AppTests: QuickSpec {
                       name: name,
                       iconString: iconString,
                       store: store,
-                      rating: rating,
                       releaseDate: releaseDate,
                       updatedDate: updatedDate)
 
@@ -58,7 +55,6 @@ final class AppTests: QuickSpec {
         expect(app.name).to(equal(name))
         expect(app.iconString).to(equal(iconString))
         expect(app.store).to(equal(store))
-        expect(app.rating).to(equal(rating))
         expect(app.releaseDate).to(equal(releaseDate))
         expect(app.updatedDate).to(equal(updatedDate))
       }
@@ -69,14 +65,12 @@ final class AppTests: QuickSpec {
         let app = App(id: id,
                       name: name,
                       store: store,
-                      rating: rating,
                       updatedDate: updatedDate)
 
         // Assertion
         expect(app.id).to(equal(id))
         expect(app.name).to(equal(name))
         expect(app.store).to(equal(store))
-        expect(app.rating).to(equal(rating))
         expect(app.updatedDate).to(equal(updatedDate))
         expect(app.iconString).to(beNil())
         expect(app.releaseDate).to(beNil())

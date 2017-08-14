@@ -24,14 +24,10 @@ final class ParseManager {
       let releaseDate = json["release_date"].stringValue
       let updatedDate = json["updated_date"].stringValue
 
-      // TODO: delete rating from AppModel. It's not used here.
-      let rating = 3.0
-
       newApp = App(id: id,
                    name: name,
                    iconString: iconString,
                    store: store,
-                   rating: rating,
                    releaseDate: releaseDate,
                    updatedDate: updatedDate)
 
@@ -43,7 +39,6 @@ final class ParseManager {
                    name: "Error: unexpected app id",
                    iconString: nil,
                    store: "n/a",
-                   rating: 3.0,
                    releaseDate: "1900-01-01T00:00:00",
                    updatedDate: "1900-01-01T00:00:00")
 
@@ -54,7 +49,6 @@ final class ParseManager {
                    name: "Unknown error from App Figures API",
                    iconString: nil,
                    store: "n/a",
-                   rating: 3.0,
                    releaseDate: "1900-01-01T00:00:00",
                    updatedDate: "1900-01-01T00:00:00")
     }
