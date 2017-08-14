@@ -50,6 +50,12 @@ final class ParseManagerTests: QuickSpec {
         }
       }
 
+      context("when the json does not contain an app") {
+
+        it("should return an app with default parameters") {
+
+        }
+      }
     }
   }
 
