@@ -24,7 +24,7 @@ final class HomeViewModel {
 
   // MARK: Properties
 
-  fileprivate var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1]
+  fileprivate var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1, 212242352]
 
 }
 
