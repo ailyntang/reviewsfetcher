@@ -21,11 +21,13 @@ final class AppTests: QuickSpec {
       // Arrangement
       let id = 212243832
       let name = "Coles App"
-      let icon = #imageLiteral(resourceName: "imgDefaultApp")
+      let iconString = "url"
       let store = "apple"
       let rating = 3.8
+      let releaseDate = "2017-07-01"
+      let updatedDate = "2017-08-01"
 
-      it("should have optional values for all its parameters") {
+      it("should initialise when provided with no values") {
 
         // Action
         let app = App()
@@ -33,28 +35,52 @@ final class AppTests: QuickSpec {
         // Assertion
         expect(app.id).to(beNil())
         expect(app.name).to(beNil())
-        expect(app.icon).to(beNil())
+        expect(app.iconString).to(beNil())
         expect(app.store).to(beNil())
         expect(app.rating).to(beNil())
+        expect(app.releaseDate).to(beNil())
+        expect(app.updatedDate).to(beNil())
       }
 
-      it("should initialise with the correct values") {
+      it("should initialise when provided with all values") {
 
         // Action
         let app = App(id: id,
                       name: name,
-                      icon: icon,
+                      iconString: iconString,
                       store: store,
-                      rating: rating)
+                      rating: rating,
+                      releaseDate: releaseDate,
+                      updatedDate: updatedDate)
 
         // Assertion
         expect(app.id).to(equal(id))
         expect(app.name).to(equal(name))
-        expect(app.icon).to(equal(#imageLiteral(resourceName: "imgDefaultApp")))
+        expect(app.iconString).to(equal(iconString))
         expect(app.store).to(equal(store))
         expect(app.rating).to(equal(rating))
+        expect(app.releaseDate).to(equal(releaseDate))
+        expect(app.updatedDate).to(equal(updatedDate))
       }
 
+      it("should initialise when provided with some values") {
+
+        // Action
+        let app = App(id: id,
+                      name: name,
+                      store: store,
+                      rating: rating,
+                      updatedDate: updatedDate)
+
+        // Assertion
+        expect(app.id).to(equal(id))
+        expect(app.name).to(equal(name))
+        expect(app.store).to(equal(store))
+        expect(app.rating).to(equal(rating))
+        expect(app.updatedDate).to(equal(updatedDate))
+        expect(app.iconString).to(beNil())
+        expect(app.releaseDate).to(beNil())
+      }
     }
   }
 
