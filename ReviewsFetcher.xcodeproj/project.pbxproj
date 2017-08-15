@@ -29,6 +29,7 @@
 		6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC041F4255CC00658A90 /* StubAppOverview.json */; };
 		6AD8CC071F4391AF00658A90 /* StubAppFiguresMessage.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC061F4391AF00658A90 /* StubAppFiguresMessage.json */; };
 		6AD8CC091F439B4900658A90 /* StubNoMessageNoAppId.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC081F439B4900658A90 /* StubNoMessageNoAppId.json */; };
+		6AD8CC0B1F439CCC00658A90 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8CC0A1F439CCC00658A90 /* NetworkManagerTests.swift */; };
 		A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */; };
 		DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		6AD8CC041F4255CC00658A90 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
 		6AD8CC061F4391AF00658A90 /* StubAppFiguresMessage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppFiguresMessage.json; sourceTree = "<group>"; };
 		6AD8CC081F439B4900658A90 /* StubNoMessageNoAppId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubNoMessageNoAppId.json; sourceTree = "<group>"; };
+		6AD8CC0A1F439CCC00658A90 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 				6A1B07F91F1A293900CFEE89 /* HomeViewModelTests.swift */,
 				6A1B08051F1C673700CFEE89 /* AppTests.swift */,
 				6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */,
+				6AD8CC0A1F439CCC00658A90 /* NetworkManagerTests.swift */,
 			);
 			path = ReviewsFetcherTests;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD8CC0B1F439CCC00658A90 /* NetworkManagerTests.swift in Sources */,
 				6A1B07FC1F1B1D6E00CFEE89 /* HomeViewModelTests.swift in Sources */,
 				6A1B08061F1C673700CFEE89 /* AppTests.swift in Sources */,
 				6AD8CBFF1F424B2800658A90 /* ParseManagerTests.swift in Sources */,
