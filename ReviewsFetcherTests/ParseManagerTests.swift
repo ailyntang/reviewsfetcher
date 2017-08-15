@@ -25,6 +25,7 @@ final class ParseManagerTests: QuickSpec {
 
       let urlAppOverview = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
       let urlMessage = Bundle.main.url(forResource: "StubAppFiguresMessage", withExtension: "json")
+      let urlUnexpected = Bundle.main.url(forResource: "StubNoMessageNoAppId", withExtension: "json")
 
       context("when the json contains an app id") {
 
@@ -68,6 +69,30 @@ final class ParseManagerTests: QuickSpec {
           // Assertion
 
           expect(app.name).to(equal("Error: app not found"))
+          expect(app.iconString).to(beNil())
+          expect(app.store).to(equal("n/a"))
+          expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
+          expect(app.updatedDate).to(equal("1900-01-01T00:00:00"))
+        }
+      }
+
+      context("when the json has no app id and no message") {
+
+        it("should return an app with default parameters") {
+
+          // Action
+
+          do {
+            let data = try Data(contentsOf: urlUnexpected!)
+            let json = JSON(data: data)
+            app = ParseManager.parseAppOverview(from: json)
+          } catch {
+            print(error.localizedDescription)
+          }
+
+          // Assertion
+
+          expect(app.name).to(equal("Unknown error from App Figures API"))
           expect(app.iconString).to(beNil())
           expect(app.store).to(equal("n/a"))
           expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
