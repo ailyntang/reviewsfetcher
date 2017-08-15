@@ -32,9 +32,8 @@ final class ParseManager {
                    updatedDate: updatedDate)
 
     } else if let errorMessage = json["message"].string {
-
-      // TODO: Make this log an error in the debug log (see safefood)
       print("Error: \(errorMessage)")
+
       newApp = App(id: nil,
                    name: "Error: unexpected app id",
                    iconString: nil,
