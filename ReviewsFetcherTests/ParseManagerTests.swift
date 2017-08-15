@@ -24,7 +24,7 @@ final class ParseManagerTests: QuickSpec {
       var app = App()
 
       let urlAppOverview = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
-      let urlProductIdNotFound = Bundle.main.url(forResource: "StubAppOverviewProductIdNotFound", withExtension: "json")
+      let urlMessage = Bundle.main.url(forResource: "StubAppFiguresMessage", withExtension: "json")
 
       context("when the json contains an app id") {
 
@@ -58,7 +58,7 @@ final class ParseManagerTests: QuickSpec {
           // Action
 
           do {
-            let data = try Data(contentsOf: urlProductIdNotFound!)
+            let data = try Data(contentsOf: urlMessage!)
             let json = JSON(data: data)
             app = ParseManager.parseAppOverview(from: json)
           } catch {
