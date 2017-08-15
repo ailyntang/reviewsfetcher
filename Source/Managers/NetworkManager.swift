@@ -20,7 +20,7 @@ final class NetworkManager {
 
    - parameter appId: an integer with the App Figures product id unique to every app
    */
-  class func fetchAppOverview(appId: Int, completionHandler: @escaping (App) -> Void) {
+  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App) -> Void) {
 
     let urlBaseString = "https://api.appfigures.com/v2/products/"
     let urlString = "\(urlBaseString)\(appId)"
@@ -28,13 +28,8 @@ final class NetworkManager {
     let url = URL(string: urlString)!
     var request = URLRequest(url: url)
 
-    let authentication = AuthenticationSecrets()
-    let authCredentials = "\(authentication.username):\(authentication.password)"
-    let authData = authCredentials.data(using: String.Encoding.utf8)
-    let authVal = authData!.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters)
-
-    request.setValue("Basic \(authVal)", forHTTPHeaderField: "Authorization")
-    request.setValue(authentication.clientKey, forHTTPHeaderField: "X-Client-Key")
+    request.setValue("Basic \(auth.authValue)", forHTTPHeaderField: "Authorization")
+    request.setValue(auth.clientKey, forHTTPHeaderField: "X-Client-Key")
     request.httpMethod = "GET"
 
     Alamofire.request(request).responseData{ dataResponse in

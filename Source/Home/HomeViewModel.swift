@@ -57,9 +57,15 @@ private extension HomeViewModel {
   }
 
   func loadApp(appId: Int) {
+
+    let authCredentials = AuthenticationSecrets()
+    let authentication = Authentication(username: authCredentials.username,
+                                        password: authCredentials.password,
+                                        clientKey: authCredentials.clientKey)
+
     self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
 
-    NetworkManager.fetchAppOverview(appId: appId, completionHandler: { app in
+    NetworkManager.fetchAppOverview(auth: authentication, appId: appId, completionHandler: { app in
       self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
       self.delegate?.viewModel(self, didSortListBy: "name")
       self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
