@@ -12,6 +12,25 @@ import Nimble
 
 @testable import ReviewsFetcher
 
-final class NetworkManagerTests {
+final class NetworkManagerTests: QuickSpec {
 
+  override func spec() {
+
+    describe("The network manager") {
+
+      context("when authentication succeeeds") {
+
+        it("should fetch an app overview") {
+
+        }
+      }
+
+      context("when authentication fails") {
+
+        it("should return an error") {
+
+        }
+      }
+    }
+  }
 }
