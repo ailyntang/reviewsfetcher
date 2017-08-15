@@ -27,6 +27,7 @@
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
 		6AD8CBFF1F424B2800658A90 /* ParseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */; };
 		6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC041F4255CC00658A90 /* StubAppOverview.json */; };
+		6AD8CC071F4391AF00658A90 /* StubAppOverviewProductIdNotFound.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC061F4391AF00658A90 /* StubAppOverviewProductIdNotFound.json */; };
 		A3339B0D817253A2838098EF /* Pods_ReviewsFetcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F4689B4EF41CF55C32DD84 /* Pods_ReviewsFetcherTests.framework */; };
 		DE6A4278432242736B76AA06 /* Pods_ReviewsFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManagerTests.swift; sourceTree = "<group>"; };
 		6AD8CC041F4255CC00658A90 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
+		6AD8CC061F4391AF00658A90 /* StubAppOverviewProductIdNotFound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverviewProductIdNotFound.json; sourceTree = "<group>"; };
 		9AC8D996A34FD3BF65661EAB /* Pods-ReviewsFetcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC1A0EBDE2A27AA5DE181058 /* Pods-ReviewsFetcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherUITests/Pods-ReviewsFetcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2009E5E934CC296B3886601 /* Pods_ReviewsFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewsFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD8CC041F4255CC00658A90 /* StubAppOverview.json */,
+				6AD8CC061F4391AF00658A90 /* StubAppOverviewProductIdNotFound.json */,
 			);
 			path = JsonStubs;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */,
 				6A6E50481EF0987100ED1A1C /* Assets.xcassets in Resources */,
 				6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */,
+				6AD8CC071F4391AF00658A90 /* StubAppOverviewProductIdNotFound.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
