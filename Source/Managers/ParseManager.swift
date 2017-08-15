@@ -32,10 +32,12 @@ final class ParseManager {
                    updatedDate: updatedDate)
 
     } else if let errorMessage = json["message"].string {
-      print("Error: \(errorMessage)")
+
+      let status = json["status"].stringValue
+      print("Error: \(status) \(errorMessage)")
 
       newApp = App(id: nil,
-                   name: "Error: unexpected app id",
+                   name: "Error: app not found",
                    iconString: nil,
                    store: "n/a",
                    releaseDate: "1900-01-01T00:00:00",

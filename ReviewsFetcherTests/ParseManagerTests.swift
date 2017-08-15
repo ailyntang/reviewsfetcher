@@ -67,7 +67,7 @@ final class ParseManagerTests: QuickSpec {
 
           // Assertion
 
-          expect(app.name).to(equal("Error: app id not found"))
+          expect(app.name).to(equal("Error: app not found"))
           expect(app.iconString).to(beNil())
           expect(app.store).to(equal("n/a"))
           expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
