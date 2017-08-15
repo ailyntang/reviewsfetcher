@@ -23,7 +23,8 @@ final class ParseManagerTests: QuickSpec {
 
       var app = App()
 
-      let url = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
+      let urlAppOverview = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
+      let urlProductIdNotFound = Bundle.main.url(forResource: "StubAppOverviewProductIdNotFound", withExtension: "json")
 
       context("when the json contains an app id") {
 
@@ -32,7 +33,7 @@ final class ParseManagerTests: QuickSpec {
           // Action
 
           do {
-            let data = try Data(contentsOf: url!)
+            let data = try Data(contentsOf: urlAppOverview!)
             let json = JSON(data: data)
             app = ParseManager.parseAppOverview(from: json)
           } catch {
@@ -50,10 +51,27 @@ final class ParseManagerTests: QuickSpec {
         }
       }
 
-      context("when the json does not contain an app") {
+      context("when the json contains a message") {
 
         it("should return an app with default parameters") {
 
+          // Action
+
+          do {
+            let data = try Data(contentsOf: urlProductIdNotFound!)
+            let json = JSON(data: data)
+            app = ParseManager.parseAppOverview(from: json)
+          } catch {
+            print(error.localizedDescription)
+          }
+
+          // Assertion
+
+          expect(app.name).to(equal("Error: app id not found"))
+          expect(app.iconString).to(beNil())
+          expect(app.store).to(equal("n/a"))
+          expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
+          expect(app.updatedDate).to(equal("1900-01-01T00:00:00"))
         }
       }
     }
