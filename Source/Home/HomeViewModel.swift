@@ -22,10 +22,16 @@ final class HomeViewModel {
 
   weak var delegate: HomeViewModelDelegate?
 
-  // MARK: Public Properties
+  // MARK: Properties
 
-  var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1, 212242352]
+  fileprivate var listOfAppIds: [Int]?
 
+
+  // MARK: Initialisation
+
+  init(with listOfAppIds: [Int]?) {
+    self.listOfAppIds = listOfAppIds
+  }
 }
 
 // MARK: - Conformance: HomeViewModelType

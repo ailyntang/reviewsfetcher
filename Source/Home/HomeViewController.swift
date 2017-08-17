@@ -29,7 +29,7 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = HomeViewModel()
+    viewModel = HomeViewModel(with: [264519898208, 212243832, 40332083066, 1, 212242352])
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
     }
