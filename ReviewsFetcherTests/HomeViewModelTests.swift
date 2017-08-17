@@ -18,15 +18,18 @@ final class HomeViewModelTests: QuickSpec {
 
     describe("The loadApps method") {
 
-      // Arrangement
-      let viewModel = HomeViewModel()
-
       context("when it has a nil input") {
 
-        // Action
+        // Arrangement
+        let viewModel = HomeViewModel(with: nil)
 
         it("displays the empty state"){
 
+          // Action
+          viewModel.controllerDidAppear()
+
+          // Assertion
+          viewModel.delegate?.viewModel(viewModel, didUpdateIsListAvailableTo: false)
         }
       }
 
@@ -47,4 +50,30 @@ final class HomeViewModelTests: QuickSpec {
       }
     }
   }
+}
+
+// MARK: - Output Mock
+
+private final class HomeViewModelDelegateMock: HomeViewModelDelegate {
+
+  // MARK: Properties
+
+  var isListAvailable: Bool?
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
+
+  }
+
+  func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
+
+  }
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+    self.isListAvailable = isListAvailable
+  }
+
+  func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
+
+  }
+
 }
