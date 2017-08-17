@@ -54,6 +54,23 @@ final class NetworkManagerTests: QuickSpec {
 
         it("should return an error") {
 
+          waitUntil(timeout: 4) { done in
+
+            // Action
+            NetworkManager.fetchAppOverview(auth: authFailure, appId: 40332083066, completionHandler: { newApp in
+              app = newApp
+
+              // Assertion
+              expect(app.name).to(equal("Error: app not found"))
+              expect(app.id).to(beNil())
+              expect(app.iconString).to(beNil())
+              expect(app.store).to(equal("n/a"))
+              expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
+              expect(app.updatedDate).toNot(beNil())
+
+              done()
+            })
+          }
         }
       }
     }
