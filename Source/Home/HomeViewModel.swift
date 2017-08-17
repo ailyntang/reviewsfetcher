@@ -22,9 +22,9 @@ final class HomeViewModel {
 
   weak var delegate: HomeViewModelDelegate?
 
-  // MARK: Properties
+  // MARK: Public Properties
 
-  fileprivate var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1, 212242352]
+  var listOfAppIds: [Int]? = [264519898208, 212243832, 40332083066, 1, 212242352]
 
 }
 
