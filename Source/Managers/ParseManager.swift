@@ -33,6 +33,8 @@ final class ParseManager {
 
     } else if let errorMessage = json["message"].string {
 
+      // This occurs when authentication fails, product id doesn't exist, or
+      // app figures is called but doesn't recognise the url.
       let status = json["status"].stringValue
       print("Error: \(status) \(errorMessage)")
 
