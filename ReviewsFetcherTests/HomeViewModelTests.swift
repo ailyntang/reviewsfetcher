@@ -22,28 +22,37 @@ final class HomeViewModelTests: QuickSpec {
 
         // Arrangement
         let viewModel = HomeViewModel(with: nil)
+        let viewModelDelegateMock = HomeViewModelDelegateMock()
 
-        it("displays the empty state"){
+        it("displays the empty state") {
 
           // Action
           viewModel.controllerDidAppear()
+          viewModel.delegate?.viewModel(viewModel, didUpdateIsListAvailableTo: false)
 
           // Assertion
-          viewModel.delegate?.viewModel(viewModel, didUpdateIsListAvailableTo: false)
+          viewModelDelegateMock.didUpdateIsListAvailableExpectation = self.expectation(description: "didUpdateIsListAvailable should be executed")
         }
       }
 
       context("when it has a non nil input") {
 
+        // Arrangement
+        let viewModel = HomeViewModel(with: [264519898208, 212243832])
+
         it("makes a network call") {
 
         }
 
-        it("returns a loading spinner for the duration of the call"){
+        it("returns a loading spinner for the duration of the call") {
 
         }
 
-        it("displays a list of apps when the call is successful"){
+        it("displays a list of apps when the call is successful") {
+          viewModel.delegate?.viewModel(viewModel, didUpdateIsListAvailableTo: true)
+        }
+
+        it("sorts the apps in alphabetical order") {
 
         }
 
@@ -68,8 +77,12 @@ private final class HomeViewModelDelegateMock: HomeViewModelDelegate {
 
   }
 
+  var didUpdateIsListAvailableExpectation: XCTestExpectation?
+
   func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
     self.isListAvailable = isListAvailable
+
+    didUpdateIsListAvailableExpectation?.fulfill()
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
