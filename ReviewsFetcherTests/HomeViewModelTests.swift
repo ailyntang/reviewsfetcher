@@ -16,21 +16,34 @@ final class HomeViewModelTests: QuickSpec {
 
   override func spec() {
 
-    describe(".viewDidAppear") {
+    describe("The loadApps method") {
 
-      context("when the API call is made") {
+      // Arrangement
+      let viewModel = HomeViewModel()
+
+      context("when it has a nil input") {
+
+        // Action
+
+        it("displays the empty state"){
+
+        }
+      }
+
+      context("when it has a non nil input") {
+
+        it("makes a network call") {
+
+        }
 
         it("returns a loading spinner for the duration of the call"){
 
         }
 
-        it("returns an error if the API call fails"){
+        it("displays a list of apps when the call is successful"){
 
         }
 
-        it("returns a list of Apps if the API call is successful"){
-
-        }
       }
     }
   }
