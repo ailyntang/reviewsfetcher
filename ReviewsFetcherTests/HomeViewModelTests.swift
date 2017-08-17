@@ -99,7 +99,7 @@ private final class HomeViewModelDelegateMock: HomeViewModelDelegate {
   func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
     self.app = app
 
-    didUpdateAppOverviewExpectation.fulfill()
+    didUpdateAppOverviewExpectation?.fulfill()
   }
 
   func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
