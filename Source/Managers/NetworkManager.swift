@@ -33,12 +33,11 @@ final class NetworkManager {
     request.httpMethod = "GET"
 
     Alamofire.request(request).responseData{ dataResponse in
-      var app = App()
-      
       if let data = dataResponse.result.value {
         let json = JSON(data: data)
-        app = ParseManager.parseAppOverview(from: json)
-        completionHandler(app)
+        if let app = ParseManager.parseAppOverview(from: json) {
+          completionHandler(app)
+        }
 
       } else {
         print("No data returned from network call")

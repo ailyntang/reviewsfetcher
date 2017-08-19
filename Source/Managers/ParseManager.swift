@@ -11,9 +11,9 @@ import SwiftyJSON
 
 final class ParseManager {
 
-  static func parseAppOverview(from json: JSON) -> App {
+  static func parseAppOverview(from json: JSON) -> App? {
 
-    var newApp = App()
+    var newApp: App?
 
     if let _ = json["id"].int {
 
@@ -38,22 +38,8 @@ final class ParseManager {
       let status = json["status"].stringValue
       print("Error: \(status) \(errorMessage)")
 
-      newApp = App(id: nil,
-                   name: "Error: app not found",
-                   iconString: nil,
-                   store: "n/a",
-                   releaseDate: "1900-01-01T00:00:00",
-                   updatedDate: "1900-01-01T00:00:00")
-
     } else {
       print("No app id and no error message returned from json. Not sure when we would get here.")
-
-      newApp = App(id: nil,
-                   name: "Unknown error from App Figures API",
-                   iconString: nil,
-                   store: "n/a",
-                   releaseDate: "1900-01-01T00:00:00",
-                   updatedDate: "1900-01-01T00:00:00")
     }
 
     return newApp
