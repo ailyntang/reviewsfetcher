@@ -44,6 +44,8 @@ final class HomeTableViewCell: UITableViewCell {
       appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
       appNameLabel.text = "Error with API call"
       storeLabel.text = "n/a"
+      releaseDateLabel.text = "n/a"
+      updatedDateLabel.text = "n/a"
     }
   }
 
