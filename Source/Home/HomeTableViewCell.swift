@@ -28,14 +28,10 @@ final class HomeTableViewCell: UITableViewCell {
 
     if let iconString = app.iconString {
       iconString.convertToImage(with: appImageView)
-    } else {
-      appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
-    }
-    
-    appNameLabel.text = app.name
-    storeLabel.text = app.store
 
-    if app.releaseDate != nil {
+      appNameLabel.text = app.name
+      storeLabel.text = app.store
+
       dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
       let releaseDate = dateFormatter.date(from: app.releaseDate!)
       let updatedDate = dateFormatter.date(from: app.updatedDate!)
@@ -43,6 +39,11 @@ final class HomeTableViewCell: UITableViewCell {
       dateFormatter.dateFormat = "dd MMM yyyy"
       releaseDateLabel.text = dateFormatter.string(from: releaseDate!)
       updatedDateLabel.text = dateFormatter.string(from: updatedDate!)
+
+    } else {
+      appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
+      appNameLabel.text = "Error with API call"
+      storeLabel.text = "n/a"
     }
   }
 
