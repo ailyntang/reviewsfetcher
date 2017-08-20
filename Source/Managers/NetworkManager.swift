@@ -20,7 +20,7 @@ final class NetworkManager {
 
    - parameter appId: an integer with the App Figures product id unique to every app
    */
-  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App) -> Void) {
+  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
     let urlBaseString = "https://api.appfigures.com/v2/products/"
     let urlString = "\(urlBaseString)\(appId)"
