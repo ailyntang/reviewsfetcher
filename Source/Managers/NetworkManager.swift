@@ -38,12 +38,13 @@ final class NetworkManager {
         if let app = ParseManager.parseAppOverview(from: json) {
           completionHandler(app)
         } else {
-          print("nil returned from parse app overview - there's an issue")
           completionHandler(nil)
         }
 
       } else {
+        // TODO: this is where we handle the error state I think, but not sure how with completionHandler
         print("No data returned from network call")
+        completionHandler(nil)
       }
     }
   }
