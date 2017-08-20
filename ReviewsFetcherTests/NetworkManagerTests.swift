@@ -40,10 +40,9 @@ final class NetworkManagerTests: QuickSpec {
               // Assertion
               expect(app.name).to(equal("Peoplecare"))
               expect(app.id).to(equal(40332083066))
-              expect(app.iconString).to(equal("http://is1.mzstatic.com/image/thumb/Purple127/v4/aa/27/95/aa2795b2-add6-6ece-2ba6-035d7900f60c/source/1280x1280bb.png"))
+              expect(app.iconString).to(beAnInstanceOf(String.self))
               expect(app.releaseDate).to(equal("2014-10-22T00:00:00"))
-              expect(app.updatedDate).toNot(beNil())
-
+              expect(app.updatedDate).to(beAnInstanceOf(String.self))
               done()
             })
           }
