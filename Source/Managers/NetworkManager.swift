@@ -37,6 +37,9 @@ final class NetworkManager {
         let json = JSON(data: data)
         if let app = ParseManager.parseAppOverview(from: json) {
           completionHandler(app)
+        } else {
+          print("nil returned from parse app overview - there's an issue")
+          completionHandler(nil)
         }
 
       } else {
