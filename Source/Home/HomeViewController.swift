@@ -66,9 +66,9 @@ extension HomeViewController: HomeViewModelDelegate {
     if self.apps.count > 0 {
       self.apps.sort(by: {
         if $0.name == $1.name {
-          return $0.store! < $1.store!
+          return ($0.store ?? "n/a") < ($1.store ?? "n/a")
         } else {
-          return $0.name! < $1.name!
+          return ($0.name ?? "Error") < ($1.name ?? "Error")
         }
       })
       self.tableView.reloadData()
