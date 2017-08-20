@@ -16,11 +16,9 @@ final class NetworkManagerTests: QuickSpec {
 
   override func spec() {
 
-    describe("The network manager") {
+    describe("Fetching an app overview") {
 
       // Arrangement
-      var app = App()
-
       let auth = AuthenticationSecrets()
       let authSuccess = Authentication(username: auth.username,
                                        password: auth.password,
@@ -29,20 +27,23 @@ final class NetworkManagerTests: QuickSpec {
 
       context("when authentication succeeeds") {
 
-        it("should fetch an app overview") {
+        it("should return an app") {
 
           waitUntil(timeout: 4) { done in
 
             // Action
-            NetworkManager.fetchAppOverview(auth: authSuccess, appId: 40332083066, completionHandler: { newApp in
-              app = newApp
+            NetworkManager.fetchAppOverview(auth: authSuccess, appId: 40332083066, completionHandler: { app in
 
               // Assertion
-              expect(app.name).to(equal("Peoplecare"))
-              expect(app.id).to(equal(40332083066))
-              expect(app.iconString).to(beAnInstanceOf(String.self))
-              expect(app.releaseDate).to(equal("2014-10-22T00:00:00"))
-              expect(app.updatedDate).to(beAnInstanceOf(String.self))
+              expect(app).toNot(beNil())
+
+              if let app = app {
+                expect(app.name).to(equal("Peoplecare"))
+                expect(app.id).to(equal(40332083066))
+                expect(app.iconString).to(beAnInstanceOf(String.self))
+                expect(app.releaseDate).to(equal("2014-10-22T00:00:00"))
+                expect(app.updatedDate).to(beAnInstanceOf(String.self))
+              }
               done()
             })
           }
@@ -51,22 +52,15 @@ final class NetworkManagerTests: QuickSpec {
 
       context("when authentication fails") {
 
-        it("should return an error") {
+        it("should return nil") {
 
           waitUntil(timeout: 4) { done in
 
             // Action
-            NetworkManager.fetchAppOverview(auth: authFailure, appId: 40332083066, completionHandler: { newApp in
-              app = newApp
+            NetworkManager.fetchAppOverview(auth: authFailure, appId: 40332083066, completionHandler: { app in
 
               // Assertion
-              expect(app.name).to(equal("Error: app not found"))
-              expect(app.id).to(beNil())
-              expect(app.iconString).to(beNil())
-              expect(app.store).to(equal("n/a"))
-              expect(app.releaseDate).to(equal("1900-01-01T00:00:00"))
-              expect(app.updatedDate).toNot(beNil())
-
+              expect(app).to(beNil())
               done()
             })
           }
