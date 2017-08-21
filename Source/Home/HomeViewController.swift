@@ -104,6 +104,17 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
 
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let app = apps[indexPath.row]
+    print(app)
+    self.performSegue(withIdentifier: "appDetailsSegue", sender: self)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    let appDetailsVC = segue.destination as! AppDetailsViewController
+  }
+
 }
 
 // MARK: - Private Methods

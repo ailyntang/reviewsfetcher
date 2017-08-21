@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6cr-Zw-B8p" id="qv3-dU-72h">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgDefaultApp" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-rt-gjM">
@@ -182,11 +182,20 @@
                     <connections>
                         <outlet property="emptyListLabel" destination="4uC-0U-aDA" id="Fjw-ui-eZo"/>
                         <outlet property="tableView" destination="N6Q-ca-uww" id="ssD-3n-QUT"/>
+                        <segue destination="UzR-5K-7U9" kind="show" identifier="appDetailsSegue" id="Nlc-xP-UbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="421.60000000000002" y="124.58770614692655"/>
+        </scene>
+        <!--AppDetailsViewController-->
+        <scene sceneID="eLF-7R-taF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AppDetails" referencedIdentifier="AppDetailsViewController" id="UzR-5K-7U9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05R-rs-8cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="124"/>
         </scene>
     </scenes>
     <resources>
