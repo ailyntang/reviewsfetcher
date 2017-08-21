@@ -12,7 +12,7 @@
         <!--App Details View Controller-->
         <scene sceneID="0bA-ew-qw3">
             <objects>
-                <viewController id="HvL-cn-dBh" customClass="AppDetailsViewController" customModule="ReviewsFetcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppDetailsViewController" id="HvL-cn-dBh" customClass="AppDetailsViewController" customModule="ReviewsFetcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xId-Tq-BeY"/>
                         <viewControllerLayoutGuide type="bottom" id="lV8-g5-hMx"/>
