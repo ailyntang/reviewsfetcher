@@ -23,7 +23,7 @@ final class NetworkManager {
 
   // To activate the correct function, change the function name to be `fetchAppOverview`.
   // Change the unused function name to something different so it's not called.
-  
+
   // MARK: - Call App Figures API (costs money)
 
   class func fetchAppOverview2(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
@@ -64,8 +64,11 @@ final class NetworkManager {
     do {
       let data = try Data(contentsOf: url!)
       let json = JSON(data: data)
-      let app = ParseManager.parseAppOverview(from: json)
-      completionHandler(app)
+      if let app = ParseManager.parseAppOverview(from: json) {
+        completionHandler(app)
+      } else {
+        completionHandler(nil)
+      }
     } catch {
       completionHandler(nil)
     }
