@@ -20,7 +20,13 @@ final class NetworkManager {
 
    - parameter appId: an integer with the App Figures product id unique to every app
    */
-  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
+
+  // To activate the correct function, change the function name to be `fetchAppOverview`.
+  // Change the unused function name to something different so it's not called.
+  
+  // MARK: - Call App Figures API (costs money)
+
+  class func fetchAppOverview2(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
     let urlBaseString = "https://api.appfigures.com/v2/products/"
     let urlString = "\(urlBaseString)\(appId)"
@@ -46,6 +52,22 @@ final class NetworkManager {
         print("No data returned from network call")
         completionHandler(nil)
       }
+    }
+  }
+
+  // MARK: - Use stub instead of App FIgures API (free)
+
+  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
+
+    let url = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
+
+    do {
+      let data = try Data(contentsOf: url!)
+      let json = JSON(data: data)
+      let app = ParseManager.parseAppOverview(from: json)
+      completionHandler(app)
+    } catch {
+      completionHandler(nil)
     }
   }
 
