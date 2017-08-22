@@ -12,11 +12,11 @@ final class AppDetailsViewController: UIViewController {
 
   @IBOutlet weak var label: UILabel!
 
-  var receivedString = ""
+  var receivedAppId: Int?
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    label.text = receivedString
+    label.text = String(describing: receivedAppId)
   }
 }

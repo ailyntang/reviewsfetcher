@@ -18,6 +18,8 @@ final class HomeViewController: UIViewController {
 
   fileprivate var apps: [App] = []
 
+  fileprivate var appId: Int?
+
   // MARK: IBOutlets
 
   @IBOutlet weak fileprivate var tableView: UITableView!
@@ -105,14 +107,16 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let app = apps[indexPath.row]
+    appId = app.id
+
     self.performSegue(withIdentifier: "appDetailsSegue", sender: self)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let appDetailsVC = segue.destination as! AppDetailsViewController
 
-    // TODO: Remove this later
-    appDetailsVC.receivedString = "YOYO"
+    appDetailsVC.receivedAppId = appId
   }
 
 }
