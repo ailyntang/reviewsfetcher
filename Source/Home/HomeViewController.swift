@@ -113,6 +113,7 @@ extension HomeViewController: UITableViewDelegate {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     let appDetailsVC = segue.destination as! AppDetailsViewController
+    appDetailsVC.receivedString = "YOYO"
   }
 
 }
