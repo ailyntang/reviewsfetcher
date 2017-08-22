@@ -8,6 +8,10 @@
 
 import Foundation
 
-final class AppDetailsViewModelType {
+protocol AppDetailsViewModelType {
 
+  weak var delegate: AppDetailsViewModelDelegate? { get set }
+
+  func controllerDidAppear()
+  
 }
