@@ -8,6 +8,27 @@
 
 import Foundation
 
-final class AppDetailsViewMModel {
+final class AppDetailsViewModel {
+
+  // MARK: Conformance: AppDetailsViewModelType
+
+  weak var delegate: AppDetailsViewModelDelegate?
+
+  // MARK: Initialisation
+
+  init() {
+    
+  }
+
+}
+
+// MARK: - Conformance: AppDetailsViewModelType
+
+extension AppDetailsViewModel: AppDetailsViewModelType {
+
+  func controllerDidAppear() {
+
+  }
+
 
 }
