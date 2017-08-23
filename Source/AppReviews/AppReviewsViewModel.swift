@@ -41,7 +41,9 @@ private extension AppReviewsViewModel {
   func loadAppReviews(appId: Int?) {
 
     if let appId = appId {
+      delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
       NetworkManager.fetchAppReviews(appId: appId)
+      delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
 
     } else {
       // Handle nil value
