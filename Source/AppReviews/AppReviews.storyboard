@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--App Details View Controller-->
+        <!--App Reviews View Controller-->
         <scene sceneID="0bA-ew-qw3">
             <objects>
-                <viewController storyboardIdentifier="AppDetailsViewController" id="HvL-cn-dBh" customClass="AppDetailsViewController" customModule="ReviewsFetcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppReviewsViewController" id="HvL-cn-dBh" customClass="AppReviewsViewController" customModule="ReviewsFetcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xId-Tq-BeY"/>
                         <viewControllerLayoutGuide type="bottom" id="lV8-g5-hMx"/>

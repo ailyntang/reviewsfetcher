@@ -1,5 +1,5 @@
 //
-//  AppDetailsViewController.swift
+//  AppReviewsViewController.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 22/8/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AppDetailsViewController: UIViewController {
+final class AppReviewsViewController: UIViewController {
 
   @IBOutlet weak var label: UILabel!
 

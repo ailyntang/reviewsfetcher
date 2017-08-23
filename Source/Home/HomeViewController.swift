@@ -114,7 +114,7 @@ extension HomeViewController: UITableViewDelegate {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let appDetailsVC = segue.destination as! AppDetailsViewController
+    let appDetailsVC = segue.destination as! AppReviewsViewController
 
     appDetailsVC.receivedAppId = appId
   }
