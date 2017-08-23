@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import Quick
+import Nimble
+
+@testable import ReviewsFetcher
+
+final class AppDetailsViewModelTests: QuickSpec {
+
+  override func spec() {
+
+    describe("The app details view") {
+
+      context("when receives an app id from the home view") {
+
+        it("should make a network call to retrieve the app details") {
+
+        }
+
+      }
+
+    }
+
+  }
+}
