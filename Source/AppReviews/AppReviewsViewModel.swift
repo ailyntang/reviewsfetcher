@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class AppDetailsViewModel {
+final class AppReviewsViewModel {
 
   // MARK: Conformance: AppDetailsViewModelType
 
@@ -24,7 +24,7 @@ final class AppDetailsViewModel {
 
 // MARK: - Conformance: AppDetailsViewModelType
 
-extension AppDetailsViewModel: BaseViewModelType {
+extension AppReviewsViewModel: BaseViewModelType {
 
   func controllerDidAppear() {
 
