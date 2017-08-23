@@ -1,5 +1,5 @@
 //
-//  AppDetailsViewModelTests.swift
+//  AppReviewsViewModelTests.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 24/8/17.
@@ -12,7 +12,7 @@ import Nimble
 
 @testable import ReviewsFetcher
 
-final class AppDetailsViewModelTests: QuickSpec {
+final class AppReviewsViewModelTests: QuickSpec {
 
   override func spec() {
 

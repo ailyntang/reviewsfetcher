@@ -1,5 +1,5 @@
 //
-//  AppDetailsViewModel.swift
+//  AppReviewsViewModel.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 23/8/17.
