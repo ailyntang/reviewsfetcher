@@ -17,8 +17,11 @@ final class NetworkManager {
 
   /**
    This function takes an `appId` that correlates to the product id used by App Figures.
+   It uses this to make a network call to App Figures and returns an app.
+   If there is an error, it will return `nil`.
 
    - parameter appId: an integer with the App Figures product id unique to every app
+   - returns: an app populated with name, id, store, release data and updated date
    */
 
   // To activate the correct function, change the function name to be `fetchAppOverview`.
