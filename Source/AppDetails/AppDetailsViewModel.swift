@@ -12,7 +12,7 @@ final class AppDetailsViewModel {
 
   // MARK: Conformance: AppDetailsViewModelType
 
-  weak var delegate: AppDetailsViewModelDelegate?
+  weak var delegate: BaseViewModelDelegate?
 
   // MARK: Initialisation
 
@@ -24,7 +24,7 @@ final class AppDetailsViewModel {
 
 // MARK: - Conformance: AppDetailsViewModelType
 
-extension AppDetailsViewModel: AppDetailsViewModelType {
+extension AppDetailsViewModel: BaseViewModelType {
 
   func controllerDidAppear() {
 
