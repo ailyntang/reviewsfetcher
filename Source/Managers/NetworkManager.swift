@@ -74,4 +74,8 @@ final class NetworkManager {
     }
   }
 
+  class func fetchAppReviews(appId: Int) {
+
+  }
+
 }

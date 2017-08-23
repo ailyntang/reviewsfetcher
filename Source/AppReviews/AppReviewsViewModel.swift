@@ -14,10 +14,14 @@ final class AppReviewsViewModel {
 
   weak var delegate: BaseViewModelDelegate?
 
+  // MARK: Properties
+
+  fileprivate var appId: Int?
+
   // MARK: Initialisation
 
-  init() {
-    
+  init(with appId: Int? = nil) {
+    self.appId = appId
   }
 
 }
@@ -30,5 +34,18 @@ extension AppReviewsViewModel: BaseViewModelType {
 
   }
 
+}
+
+private extension AppReviewsViewModel {
+
+  func loadAppReviews(appId: Int?) {
+
+    if let appId = appId {
+      NetworkManager.fetchAppReviews(appId: appId)
+
+    } else {
+      // Handle nil value
+    }
+  }
 
 }
