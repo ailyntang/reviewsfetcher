@@ -16,12 +16,20 @@ final class AppReviewsViewModelTests: QuickSpec {
 
   override func spec() {
 
-    describe("The app details view") {
+    describe("The app reviews view") {
 
-      context("when receives an app id from the home view") {
+      // Arrangement
+      let viewModel = AppReviewsViewModel()
+      
+      context("when it is loaded") {
 
-        it("should make a network call to retrieve the app details") {
+        // Action
+        viewModel.controllerDidAppear()
 
+        it("should make a network call to retrieve the app reviews") {
+
+          // Assertion
+          // How do I test this? I want to keep the network call private in the view model
         }
 
       }
