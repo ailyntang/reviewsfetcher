@@ -12,7 +12,7 @@ final class HomeViewController: UIViewController {
 
   // MARK: Properties
 
-  private var viewModel: HomeViewModelType!
+  private var viewModel: BaseViewModelType!
 
   fileprivate var activityIndicator = UIActivityIndicatorView()
 
@@ -38,11 +38,11 @@ final class HomeViewController: UIViewController {
 
 }
 
-// MARK: - Conformance: HomeViewModelDelegate
+// MARK: - Conformance: BaseViewModelDelegate
 
-extension HomeViewController: HomeViewModelDelegate {
+extension HomeViewController: BaseViewModelDelegate {
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
     setupActivityIndicator()
 
     if activityIndicatorState == "start" {
@@ -52,17 +52,17 @@ extension HomeViewController: HomeViewModelDelegate {
     }
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App) {
     self.apps.append(app)
     self.tableView.reloadData()
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
     self.tableView.isHidden = !isListAvailable
     self.emptyListLabel.isHidden = isListAvailable
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
+  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String) {
 
     // Sort by store then by name
     if self.apps.count > 0 {

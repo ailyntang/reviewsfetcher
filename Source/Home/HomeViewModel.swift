@@ -20,7 +20,7 @@ final class HomeViewModel {
 
   // MARK: Conformance: HomeViewModelType
 
-  weak var delegate: HomeViewModelDelegate?
+  weak var delegate: BaseViewModelDelegate?
 
   // MARK: Properties
 
@@ -36,7 +36,7 @@ final class HomeViewModel {
 
 // MARK: - Conformance: HomeViewModelType
 
-extension HomeViewModel: HomeViewModelType {
+extension HomeViewModel: BaseViewModelType {
 
   func controllerDidAppear() {
     loadApps(appIds: listOfAppIds)

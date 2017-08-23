@@ -1,5 +1,5 @@
 //
-//  HomeViewModelType.swift
+//  BaseViewModelType.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 16/7/17.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol HomeViewModelType {
+protocol BaseViewModelType {
 
-  weak var delegate: HomeViewModelDelegate? { get set }
+  weak var delegate: BaseViewModelDelegate? { get set }
 
   func controllerDidAppear()
 }

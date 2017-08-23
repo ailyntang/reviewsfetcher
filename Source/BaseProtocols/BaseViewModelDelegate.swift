@@ -1,5 +1,5 @@
 //
-//  HomeViewModelDelegate.swift
+//  BaseViewModelDelegate.swift
 //  ReviewsFetcher
 //
 //  Created by Ai-Lyn Tang on 16/7/17.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol HomeViewModelDelegate: class {
+protocol BaseViewModelDelegate: class {
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String)
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String)
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App)
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App)
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool)
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool)
 
-  func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String)
+  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String)
   
 }
