@@ -86,7 +86,7 @@ final class HomeViewModelTests: QuickSpec {
 
 // MARK: - Output Mock
 
-private final class HomeViewModelDelegateMock: HomeViewModelDelegate {
+private final class HomeViewModelDelegateMock: BaseViewModelDelegate {
 
   // MARK: Properties
 
@@ -96,25 +96,25 @@ private final class HomeViewModelDelegateMock: HomeViewModelDelegate {
 
   var didUpdateAppOverviewExpectation: XCTestExpectation?
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateAppOverviewTo app: App) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App) {
     self.app = app
 
     didUpdateAppOverviewExpectation?.fulfill()
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didSortListBy appProperty: String) {
+  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String) {
 
   }
 
   var didUpdateIsListAvailableExpectation: XCTestExpectation?
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
     self.isListAvailable = isListAvailable
 
     didUpdateIsListAvailableExpectation?.fulfill()
   }
 
-  func viewModel(_ viewModel: HomeViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
 
   }
 
