@@ -60,6 +60,8 @@ final class NetworkManagerTests: QuickSpec {
             NetworkManager.fetchAppOverview(auth: authFailure, appId: 40332083066, completionHandler: { app in
 
               // Assertion
+
+              // Note this will fail if using the stub file instead of the real API call
               expect(app).to(beNil())
               done()
             })
