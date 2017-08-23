@@ -77,6 +77,11 @@ final class NetworkManager {
     }
   }
 
+  /**
+   This function takes an `appId` that correlates to the product id used by App Figures.
+   It uses this to make a network all to App Figures and returns the reviews for that app.
+   If there is an error, it will return `nil`.
+  */
   class func fetchAppReviews(appId: Int) {
 
   }
