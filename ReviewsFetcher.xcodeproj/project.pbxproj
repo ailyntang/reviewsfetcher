@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		303F359338CC078C9E1D4AC3 /* Pods_ReviewsFetcherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1041B587C9235DBD9B85E2B8 /* Pods_ReviewsFetcherUITests.framework */; };
 		6A196F121F4F779500233D2F /* StubAppReviewsColesGoogle.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A196F111F4F779500233D2F /* StubAppReviewsColesGoogle.json */; };
-		6A1994541F4CCE5400634C64 /* StubAppReviews.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A1994531F4CCE5400634C64 /* StubAppReviews.json */; };
+		6A1994541F4CCE5400634C64 /* StubAppReviewsColesApple.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A1994531F4CCE5400634C64 /* StubAppReviewsColesApple.json */; };
 		6A1B07F81F1A292400CFEE89 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B07F71F1A292400CFEE89 /* HomeViewModel.swift */; };
 		6A1B07FC1F1B1D6E00CFEE89 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B07F91F1A293900CFEE89 /* HomeViewModelTests.swift */; };
 		6A1B08061F1C673700CFEE89 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B08051F1C673700CFEE89 /* AppTests.swift */; };
@@ -64,7 +64,7 @@
 		2A54A847BB013367678CC865 /* Pods-ReviewsFetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcher/Pods-ReviewsFetcher.release.xcconfig"; sourceTree = "<group>"; };
 		2F96A9DEA243A0A29DB75FD6 /* Pods-ReviewsFetcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewsFetcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewsFetcherTests/Pods-ReviewsFetcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A196F111F4F779500233D2F /* StubAppReviewsColesGoogle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppReviewsColesGoogle.json; sourceTree = "<group>"; };
-		6A1994531F4CCE5400634C64 /* StubAppReviews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppReviews.json; sourceTree = "<group>"; };
+		6A1994531F4CCE5400634C64 /* StubAppReviewsColesApple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppReviewsColesApple.json; sourceTree = "<group>"; };
 		6A1B07F71F1A292400CFEE89 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6A1B07F91F1A293900CFEE89 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		6A1B08051F1C673700CFEE89 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 				6AD8CC041F4255CC00658A90 /* StubAppOverview.json */,
 				6AD8CC061F4391AF00658A90 /* StubAppFiguresMessage.json */,
 				6AD8CC081F439B4900658A90 /* StubNoMessageNoAppId.json */,
-				6A1994531F4CCE5400634C64 /* StubAppReviews.json */,
+				6A1994531F4CCE5400634C64 /* StubAppReviewsColesApple.json */,
 				6A196F111F4F779500233D2F /* StubAppReviewsColesGoogle.json */,
 			);
 			path = JsonStubs;
@@ -427,7 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1994541F4CCE5400634C64 /* StubAppReviews.json in Resources */,
+				6A1994541F4CCE5400634C64 /* StubAppReviewsColesApple.json in Resources */,
 				6AD8CC091F439B4900658A90 /* StubNoMessageNoAppId.json in Resources */,
 				6A6E504B1EF0987100ED1A1C /* LaunchScreen.storyboard in Resources */,
 				6A6E50461EF0987100ED1A1C /* Home.storyboard in Resources */,
