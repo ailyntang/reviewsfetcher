@@ -46,7 +46,7 @@ private extension AppReviewsViewModel {
       delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
 
     } else {
-      // Handle nil value
+      // Handle nil value. This could occur if the cell clicked was an error with no app id.
     }
   }
 
