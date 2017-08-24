@@ -40,9 +40,14 @@ private extension AppReviewsViewModel {
 
   func loadAppReviews(appId: Int?) {
 
+    let authCredentials = AuthenticationSecrets()
+    let auth = Authentication(username: authCredentials.username,
+                              password: authCredentials.password,
+                              clientKey: authCredentials.clientKey)
+
     if let appId = appId {
       delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
-      NetworkManager.fetchAppReviews(appId: appId)
+      NetworkManager.fetchAppReviews(auth: auth, appId: appId)
       delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
 
     } else {
