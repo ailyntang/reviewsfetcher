@@ -12,6 +12,14 @@ We anticipate the app will be used primarily for business development and accoun
 
 * **Recently launched apps**: easily keep track of user reviews after an app launch
 
+### Before running the app ###
+You will need to add `AuthenticationSecrets.swift` in the "Supporting Files" folder. 
+
+This file is ignored by git.
+It contains the App Figures authentication credentials to pass through to the network manager.
+
+The credentials are username, password and client key.
+
 ### Third parties ###
 
 This app uses the App Figures API to collect the data. This is a paid API service.
