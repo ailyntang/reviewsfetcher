@@ -87,3 +87,16 @@ final class NetworkManager {
   }
 
 }
+
+private extension NetworkManager {
+
+  func getRequest(auth: Authentication, url: URL) -> URLRequest {
+    var request = URLRequest(url: url)
+
+    request.setValue("Basic \(auth.authValue)", forHTTPHeaderField: "Authorization")
+    request.setValue(auth.clientKey, forHTTPHeaderField: "X-Client-Key")
+    request.httpMethod = "GET"
+
+    return request
+  }
+}
