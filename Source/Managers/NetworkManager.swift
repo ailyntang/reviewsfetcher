@@ -33,13 +33,10 @@ final class NetworkManager {
 
     let urlBaseString = "https://api.appfigures.com/v2/products/"
     let urlString = "\(urlBaseString)\(appId)"
-
     let url = URL(string: urlString)!
-    var request = URLRequest(url: url)
 
-    request.setValue("Basic \(auth.authValue)", forHTTPHeaderField: "Authorization")
-    request.setValue(auth.clientKey, forHTTPHeaderField: "X-Client-Key")
-    request.httpMethod = "GET"
+    let manager = NetworkManager()
+    let request = manager.getRequest(auth: auth, url: url)
 
     Alamofire.request(request).responseData{ dataResponse in
       if let data = dataResponse.result.value {
