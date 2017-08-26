@@ -55,7 +55,7 @@ final class NetworkManager {
     }
   }
 
-  // MARK: - Use stub instead of App FIgures API (free)
+  // MARK: - `fetchAppOverview` stub to avoid using App FIgures API in testing
 
   class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
