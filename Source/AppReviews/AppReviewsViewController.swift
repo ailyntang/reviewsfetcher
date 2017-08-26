@@ -30,11 +30,32 @@ final class AppReviewsViewController: UIViewController {
     super.viewDidLoad()
 
     viewModel = AppReviewsViewModel(with: nil)
-    viewModel?.delegate = self as! BaseViewModelDelegate
+    viewModel?.delegate = self
     viewModel?.controllerDidAppear()
 
     label.text = String(describing: receivedAppId)
   }
 
+}
+
+// MARK: - Conformance: BaseViewModelDelegate
+
+extension AppReviewsViewController: BaseViewModelDelegate {
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App) {
+
+  }
+
+  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String) {
+
+  }
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+
+  }
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
+
+  }
 
 }
