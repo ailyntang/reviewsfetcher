@@ -45,4 +45,14 @@ final class ParseManager {
     return newApp
   }
 
+  static func parseAppReviews(from json: JSON) -> [AppReview]? {
+
+//    var reviews: [AppReview]?
+
+    if let reviews = json["reviews"].array {
+      print(reviews.count)
+    }
+    
+    return nil
+  }
 }
