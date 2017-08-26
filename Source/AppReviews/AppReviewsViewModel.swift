@@ -47,7 +47,15 @@ private extension AppReviewsViewModel {
 
     if let appId = appId {
       delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
-      NetworkManager.fetchAppReviews(auth: auth, appId: appId)
+      NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReview in
+
+        if let appReview = appReview {
+          print(appReview)
+        } else {
+          print("API call returned nil for app reviews")
+        }
+
+      })
       delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
 
     } else {
