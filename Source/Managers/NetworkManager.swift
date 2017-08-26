@@ -79,8 +79,26 @@ final class NetworkManager {
    It uses this to make a network all to App Figures and returns the reviews for that app.
    If there is an error, it will return `nil`.
   */
-  class func fetchAppReviews(auth: Authentication, appId: Int) {
+  class func fetchAppReviews(auth: Authentication, appId: Int, completionHandler: @escaping (AppReview?) -> Void) {
 
+    let startDate = "2017-08-01"
+    let endDate = "2017-08-23"
+
+    let urlBaseString = "https://api.appfigures.com/v2/reviews?&products="
+    let urlString = "\(urlBaseString)\(appId)&start=\(startDate)&end=\(endDate)"
+    let url = URL(string: urlString)!
+
+    let manager = NetworkManager()
+    let request = manager.getRequest(auth: auth, url: url)
+
+    Alamofire.request(request).responseData{ dataResponse in
+      if let data = dataResponse.result.value {
+        let json = JSON(data: data)
+        
+        // TODO: need to update this. It's a dummy completion handler to compile.
+        completionHandler(nil)
+      }
+    }
   }
 
 }
