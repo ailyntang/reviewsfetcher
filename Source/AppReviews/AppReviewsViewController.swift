@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AppReviewsViewController: UIViewController {
+final class AppReviewsViewController: BaseViewController {
 
   // MARK: Properties
 
@@ -55,7 +55,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
-
+    self.setupActivityIndicator(state: activityIndicatorState)
   }
 
 }
