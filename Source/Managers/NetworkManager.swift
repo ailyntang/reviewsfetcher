@@ -15,6 +15,8 @@ import SwiftyJSON
  */
 final class NetworkManager {
 
+  // MARK: - Fetch App Overview
+
   /**
    This function takes an `appId` that correlates to the product id used by App Figures.
    It uses this to make a network call to App Figures and returns an app.
@@ -27,7 +29,7 @@ final class NetworkManager {
   // To activate the correct function, change the function name to be `fetchAppOverview`.
   // Change the unused function name to something different so it's not called.
 
-  // MARK: - Call App Figures API (costs money)
+  // MARK: Call App Figures API (costs money)
 
   class func fetchAppOverview2(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
@@ -55,7 +57,7 @@ final class NetworkManager {
     }
   }
 
-  // MARK: - `fetchAppOverview` stub to avoid using App FIgures API in testing
+  // MARK: `fetchAppOverview` stub to avoid using App FIgures API in testing
 
   class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
@@ -74,12 +76,16 @@ final class NetworkManager {
     }
   }
 
+  // MARK: - Fetch app reviews
+
+  // MARK: `fetchAppReviews` using real API call
+
   /**
    This function takes an `appId` that correlates to the product id used by App Figures.
    It uses this to make a network all to App Figures and returns the reviews for that app.
    If there is an error, it will return `nil`.
   */
-  class func fetchAppReviews(auth: Authentication, appId: Int, completionHandler: @escaping (AppReview?) -> Void) {
+  class func fetchAppReviews2(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
 
     let startDate = "2017-08-01"
     let endDate = "2017-08-23"
@@ -101,7 +107,7 @@ final class NetworkManager {
     }
   }
 
-  // MARK: - `fetchAppReviews` stub to avoid using App FIgures API in testing
+  // MARK: `fetchAppReviews` stub to avoid using App FIgures API in testing
   class func fetchAppReviews(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
 
     let url = Bundle.main.url(forResource: "StubAppReviewsColesApple", withExtension: "json")
