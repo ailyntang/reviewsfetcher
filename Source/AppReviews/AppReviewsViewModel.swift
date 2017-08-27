@@ -39,6 +39,7 @@ extension AppReviewsViewModel: BaseViewModelType {
 private extension AppReviewsViewModel {
 
   func loadAppReviews(appId: Int?) {
+    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
 
     let authCredentials = AuthenticationSecrets()
     let auth = Authentication(username: authCredentials.username,
@@ -46,7 +47,6 @@ private extension AppReviewsViewModel {
                               clientKey: authCredentials.clientKey)
 
     if let appId = appId {
-      delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
       NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReview in
 
         if let appReview = appReview {
@@ -54,13 +54,12 @@ private extension AppReviewsViewModel {
         } else {
           print("API call returned nil for app reviews")
         }
-
       })
-      delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
-
     } else {
       // Handle nil value. This could occur if the cell clicked was an error with no app id.
     }
+
+    delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
   }
 
 }
