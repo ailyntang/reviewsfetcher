@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVY-02-pPD">
-                                <rect key="frame" x="153" y="261" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVY-02-pPD">
+                                <rect key="frame" x="16" y="153" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 1.3.2 (apple)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKN-M0-Shv">
+                                <rect key="frame" x="16" y="204" width="343" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bKN-M0-Shv" secondAttribute="trailing" id="6MK-KL-EUe"/>
+                            <constraint firstItem="AVY-02-pPD" firstAttribute="top" secondItem="xId-Tq-BeY" secondAttribute="bottom" constant="89" id="CYg-q5-YIG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AVY-02-pPD" secondAttribute="trailing" id="DwT-Ab-4QN"/>
+                            <constraint firstItem="bKN-M0-Shv" firstAttribute="leading" secondItem="Rz4-jA-aC9" secondAttribute="leadingMargin" id="PJn-s0-E1x"/>
+                            <constraint firstItem="bKN-M0-Shv" firstAttribute="top" secondItem="AVY-02-pPD" secondAttribute="bottom" constant="8" id="oST-7l-z5i"/>
+                            <constraint firstItem="AVY-02-pPD" firstAttribute="leading" secondItem="Rz4-jA-aC9" secondAttribute="leadingMargin" id="ote-MV-jiF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="obb-Fc-5R0"/>
                     <connections>
