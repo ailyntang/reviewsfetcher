@@ -114,22 +114,3 @@ extension HomeViewController: UITableViewDelegate {
   }
 
 }
-
-// MARK: - Private Methods
-
-private extension HomeViewController {
-
-  func setupActivityIndicator(state: String) {
-    activityIndicator.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 40, height: 40))
-    activityIndicator.center = self.view.center
-    activityIndicator.activityIndicatorViewStyle = .gray
-    view.addSubview(activityIndicator)
-
-    if state == "start" {
-      activityIndicator.startAnimating()
-    } else {
-      activityIndicator.stopAnimating()
-    }
-  }
-
-}
