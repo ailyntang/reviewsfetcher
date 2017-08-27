@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rxT-gr-JQF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-1u-BmT">
-                                <rect key="frame" x="16" y="57" width="167" height="43"/>
+                                <rect key="frame" x="16" y="101" width="167" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <color key="textColor" red="0.27058823529999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N6Q-ca-uww">
-                                <rect key="frame" x="16" y="171" width="343" height="496"/>
+                                <rect key="frame" x="16" y="215" width="343" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" rowHeight="110" id="6cr-Zw-B8p" customClass="HomeTableViewCell" customModule="ReviewsFetcher" customModuleProvider="target">
@@ -157,7 +157,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No apps found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uC-0U-aDA">
-                                <rect key="frame" x="87.5" y="323" width="200" height="29"/>
+                                <rect key="frame" x="87.5" y="367" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="58h-pp-UlT"/>
                                     <constraint firstAttribute="width" constant="200" id="WR3-Mn-87Q"/>
@@ -179,6 +179,7 @@
                             <constraint firstItem="4uC-0U-aDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tv4-S9-DCJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wLf-BK-tl5"/>
                     <connections>
                         <outlet property="emptyListLabel" destination="4uC-0U-aDA" id="Fjw-ui-eZo"/>
                         <outlet property="tableView" destination="N6Q-ca-uww" id="ssD-3n-QUT"/>
@@ -187,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421.60000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="1360.8" y="124.58770614692655"/>
         </scene>
         <!--AppReviewsViewController-->
         <scene sceneID="eLF-7R-taF">
@@ -195,7 +196,25 @@
                 <viewControllerPlaceholder storyboardName="AppReviews" referencedIdentifier="AppReviewsViewController" id="UzR-5K-7U9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05R-rs-8cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="124"/>
+            <point key="canvasLocation" x="2064" y="123.23838080959521"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6HQ-Bq-vfy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rxT-gr-JQF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2c2-i9-xfg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qGo-85-7nQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15Y-oA-mK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.60000000000002" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>
