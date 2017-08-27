@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
 
   // MARK: Properties
 
@@ -43,9 +43,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: BaseViewModelDelegate {
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
-    setupActivityIndicator(state: activityIndicatorState)
-
-
+    self.setupActivityIndicator(state: activityIndicatorState)
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App) {
