@@ -32,6 +32,7 @@
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
 		6AC94A261F51506E0047F143 /* AppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC94A251F51506E0047F143 /* AppReview.swift */; };
+		6AC94A281F52C29D0047F143 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC94A271F52C29D0047F143 /* BaseViewController.swift */; };
 		6AD8CBFF1F424B2800658A90 /* ParseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */; };
 		6AD8CC051F4255CC00658A90 /* StubAppOverview.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC041F4255CC00658A90 /* StubAppOverview.json */; };
 		6AD8CC071F4391AF00658A90 /* StubAppFiguresMessage.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AD8CC061F4391AF00658A90 /* StubAppFiguresMessage.json */; };
@@ -94,6 +95,7 @@
 		6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsFetcherUITests.swift; sourceTree = "<group>"; };
 		6AC3F1BA1F19CBBA00E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC94A251F51506E0047F143 /* AppReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReview.swift; sourceTree = "<group>"; };
+		6AC94A271F52C29D0047F143 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6AD8CBFE1F424B2800658A90 /* ParseManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManagerTests.swift; sourceTree = "<group>"; };
 		6AD8CC041F4255CC00658A90 /* StubAppOverview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppOverview.json; sourceTree = "<group>"; };
 		6AD8CC061F4391AF00658A90 /* StubAppFiguresMessage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubAppFiguresMessage.json; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				6AB196601F4E1A5F009CA615 /* BaseViewModelDelegate.swift */,
 				6AB196611F4E1A5F009CA615 /* BaseViewModelType.swift */,
+				6AC94A271F52C29D0047F143 /* BaseViewController.swift */,
 			);
 			path = BaseProtocols;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				6AB502401EF664550045C674 /* App.swift in Sources */,
 				6AB1966B1F4E1FF4009CA615 /* AppReviewsViewController.swift in Sources */,
 				6A6E50491EF0987100ED1A1C /* AppDelegate.swift in Sources */,
+				6AC94A281F52C29D0047F143 /* BaseViewController.swift in Sources */,
 				6A6E50471EF0987100ED1A1C /* HomeViewController.swift in Sources */,
 				6AD8CC0D1F439EB300658A90 /* Authentication.swift in Sources */,
 			);
