@@ -43,13 +43,9 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: BaseViewModelDelegate {
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
-    setupActivityIndicator()
+    setupActivityIndicator(state: activityIndicatorState)
 
-    if activityIndicatorState == "start" {
-      activityIndicator.startAnimating()
-    } else {
-      activityIndicator.stopAnimating()
-    }
+
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App) {
@@ -125,11 +121,17 @@ extension HomeViewController: UITableViewDelegate {
 
 private extension HomeViewController {
 
-  func setupActivityIndicator() {
+  func setupActivityIndicator(state: String) {
     activityIndicator.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 40, height: 40))
     activityIndicator.center = self.view.center
     activityIndicator.activityIndicatorViewStyle = .gray
     view.addSubview(activityIndicator)
+
+    if state == "start" {
+      activityIndicator.startAnimating()
+    } else {
+      activityIndicator.stopAnimating()
+    }
   }
 
 }
