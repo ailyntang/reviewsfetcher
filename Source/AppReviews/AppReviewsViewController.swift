@@ -21,9 +21,6 @@ final class AppReviewsViewController: BaseViewController {
   // MARK: Public Properties
 
   // TODO: how can we make this private? Think about using a delegate for the segue?
-  // We don't actually need this variable. It will be deleted soon.
-  var receivedAppId: Int?
-
   var receivedApp: App?
 
   // MARK: Lifecycle
