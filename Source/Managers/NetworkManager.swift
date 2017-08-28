@@ -109,7 +109,6 @@ final class NetworkManager {
 
   // MARK: `fetchAppReviews` stub to avoid using App FIgures API in testing
   class func fetchAppReviews(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
-
     let url = Bundle.main.url(forResource: "StubAppReviewsColesApple", withExtension: "json")
 
     do {
@@ -123,7 +122,6 @@ final class NetworkManager {
       completionHandler(nil)
     }
 
-    completionHandler(nil)
   }
 
 }
