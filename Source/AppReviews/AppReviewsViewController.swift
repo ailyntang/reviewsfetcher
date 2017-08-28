@@ -75,7 +75,7 @@ private extension AppReviewsViewController {
       versionLabel.text = "Version \(version) (\(store))"
 
     } else {
-      // Native alert to say go back one screen?
+      // TODO: Native alert to say go back one screen?
       // Or just push person back to the home scene?
       appNameLabel.text = "Uh-oh, something went wrong"
     }
