@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-1u-BmT">
-                                <rect key="frame" x="16" y="57" width="167" height="43"/>
+                                <rect key="frame" x="16" y="64" width="167" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <color key="textColor" red="0.27058823529999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N6Q-ca-uww">
-                                <rect key="frame" x="16" y="171" width="343" height="452"/>
+                                <rect key="frame" x="16" y="178" width="343" height="489"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" rowHeight="110" id="6cr-Zw-B8p" customClass="HomeTableViewCell" customModule="ReviewsFetcher" customModuleProvider="target">
@@ -157,7 +157,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No apps found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uC-0U-aDA">
-                                <rect key="frame" x="87.5" y="323" width="200" height="29"/>
+                                <rect key="frame" x="87.5" y="330" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="58h-pp-UlT"/>
                                     <constraint firstAttribute="width" constant="200" id="WR3-Mn-87Q"/>
@@ -173,7 +173,7 @@
                             <constraint firstItem="N6Q-ca-uww" firstAttribute="top" secondItem="Xpd-1u-BmT" secondAttribute="bottom" constant="71" id="3MG-eU-rBW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N6Q-ca-uww" secondAttribute="bottom" id="9XQ-P0-Ftv"/>
                             <constraint firstItem="N6Q-ca-uww" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jyu-4j-Qhj"/>
-                            <constraint firstItem="Xpd-1u-BmT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="cDb-qa-DiB"/>
+                            <constraint firstItem="Xpd-1u-BmT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cDb-qa-DiB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Xpd-1u-BmT" secondAttribute="leading" id="g3Y-zT-S2X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N6Q-ca-uww" secondAttribute="trailing" id="hzb-uX-57b"/>
                             <constraint firstItem="4uC-0U-aDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tv4-S9-DCJ"/>
