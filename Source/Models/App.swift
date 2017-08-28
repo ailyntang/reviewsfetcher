@@ -50,6 +50,11 @@ struct App {
    */
   let updatedDate: String?
 
+  /**
+   The current version number on the app store.
+  */
+  let version: String?
+
   // MARK: Initialisation
 
   init(id: Int? = nil,
@@ -57,7 +62,8 @@ struct App {
        iconString: String? = nil,
        store: String? = nil,
        releaseDate: String? = nil,
-       updatedDate: String? = nil) {
+       updatedDate: String? = nil,
+       version: String? = nil) {
 
     self.id = id
     self.name = name
@@ -65,6 +71,7 @@ struct App {
     self.store = store
     self.releaseDate = releaseDate
     self.updatedDate = updatedDate
+    self.version = version
   }
 
 }
