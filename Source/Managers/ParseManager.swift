@@ -47,12 +47,25 @@ final class ParseManager {
 
   static func parseAppReviews(from json: JSON) -> [AppReview]? {
 
-//    var reviews: [AppReview]?
+    var appReviews: [AppReview] = []
 
     if let reviews = json["reviews"].array {
-      print(reviews.count)
+      for review in reviews {
+        let appId     = review["product_id"].intValue
+        let title     = review["title"].stringValue
+        let appReview = review["review"].string ?? ""
+        let stars     = review["stars"].stringValue
+        let version   = review["version"].stringValue
+        let date      = review["date"].stringValue
+
+        let newReview = AppReview(appId: appId, title: title, review: appReview, stars: stars, version: version, date: date)
+        appReviews.append(newReview)
+      }
+      return appReviews
+
+    } else {
+      return nil
     }
-    
-    return nil
   }
+
 }
