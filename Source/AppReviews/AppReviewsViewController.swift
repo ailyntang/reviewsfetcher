@@ -34,7 +34,7 @@ final class AppReviewsViewController: BaseViewController {
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
 
-    label.text = String(describing: receivedApp?.name)
+    setupHeader(with: receivedApp)
   }
 
 }
@@ -59,4 +59,26 @@ extension AppReviewsViewController: BaseViewModelDelegate {
     self.setupActivityIndicator(state: activityIndicatorState)
   }
 
+}
+
+// MARK: - Private Methods
+
+private extension AppReviewsViewController {
+
+  func setupHeader(with app: App?) {
+
+    if let app = app {
+      appNameLabel.text = app.name
+
+      let version = app.version ?? ": no version listed"
+      let store = app.store ?? "No store listed"
+      versionLabel.text = "Version \(version) (\(store))"
+
+    } else {
+      // Native alert to say go back one screen?
+      // Or just push person back to the home scene?
+      appNameLabel.text = "Uh-oh, something went wrong"
+    }
+
+  }
 }
