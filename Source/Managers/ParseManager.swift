@@ -23,13 +23,15 @@ final class ParseManager {
       let store = json["store"].stringValue
       let releaseDate = json["release_date"].stringValue
       let updatedDate = json["updated_date"].stringValue
+      let version = json["version"].stringValue
 
       newApp = App(id: id,
                    name: name,
                    iconString: iconString,
                    store: store,
                    releaseDate: releaseDate,
-                   updatedDate: updatedDate)
+                   updatedDate: updatedDate,
+                   version: version)
 
     } else if let errorMessage = json["message"].string {
 
