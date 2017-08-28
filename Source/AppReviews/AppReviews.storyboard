@@ -47,7 +47,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="obb-Fc-5R0"/>
                     <connections>
-                        <outlet property="label" destination="AVY-02-pPD" id="ivv-b7-d9y"/>
+                        <outlet property="appNameLabel" destination="AVY-02-pPD" id="AJn-z5-ojQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95o-SU-kt7" userLabel="First Responder" sceneMemberID="firstResponder"/>

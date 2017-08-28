@@ -16,7 +16,7 @@ final class AppReviewsViewController: BaseViewController {
 
   // MARK: IBOutlets
 
-  @IBOutlet fileprivate weak var label: UILabel!
+  @IBOutlet fileprivate weak var appNameLabel: UILabel!
 
   // MARK: Public Properties
 
