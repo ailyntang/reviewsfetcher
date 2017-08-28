@@ -38,7 +38,8 @@ final class HomeTableViewCell: UITableViewCell {
 
       dateFormatter.dateFormat = "dd MMM yyyy"
       releaseDateLabel.text = dateFormatter.string(from: releaseDate!)
-      updatedDateLabel.text = dateFormatter.string(from: updatedDate!)
+      let updatedDateString = dateFormatter.string(from: updatedDate!)
+      updatedDateLabel.text = "\(updatedDateString) (\(app.version!))"
 
     } else {
       appImageView.image = #imageLiteral(resourceName: "imgDefaultApp")
