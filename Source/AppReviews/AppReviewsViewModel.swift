@@ -31,7 +31,7 @@ final class AppReviewsViewModel {
 extension AppReviewsViewModel: BaseViewModelType {
 
   func controllerDidAppear() {
-    loadAppReviews(appId: 12)
+    loadAppReviews(appId: appId)
   }
 
 }
