@@ -48,6 +48,7 @@
                     <navigationItem key="navigationItem" id="obb-Fc-5R0"/>
                     <connections>
                         <outlet property="appNameLabel" destination="AVY-02-pPD" id="AJn-z5-ojQ"/>
+                        <outlet property="versionLabel" destination="bKN-M0-Shv" id="PGT-Qb-shb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95o-SU-kt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
