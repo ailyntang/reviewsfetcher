@@ -18,7 +18,7 @@ final class HomeViewController: BaseViewController {
 
   fileprivate var apps: [App] = []
 
-  fileprivate var appId: Int?
+  fileprivate var app: App?
 
   // MARK: IBOutlets
 
@@ -103,6 +103,7 @@ extension HomeViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let app = apps[indexPath.row]
     appId = app.id
+    app = apps[indexPath.row]
 
     self.performSegue(withIdentifier: "appDetailsSegue", sender: self)
   }
@@ -111,6 +112,7 @@ extension HomeViewController: UITableViewDelegate {
     let appDetailsVC = segue.destination as! AppReviewsViewController
 
     appDetailsVC.receivedAppId = appId
+    appDetailsVC.receivedApp = app
   }
 
 }

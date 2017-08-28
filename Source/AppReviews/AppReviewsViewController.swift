@@ -24,6 +24,8 @@ final class AppReviewsViewController: BaseViewController {
   // We don't actually need this variable. It will be deleted soon.
   var receivedAppId: Int?
 
+  var receivedApp: App?
+
   // MARK: Lifecycle
 
   override func viewDidLoad() {
@@ -33,7 +35,7 @@ final class AppReviewsViewController: BaseViewController {
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
 
-    label.text = String(describing: receivedAppId)
+    label.text = String(describing: receivedApp?.name)
   }
 
 }
