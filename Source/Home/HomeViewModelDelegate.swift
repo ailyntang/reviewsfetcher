@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol HomeViewModelDelegate {
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App)
+
+}
