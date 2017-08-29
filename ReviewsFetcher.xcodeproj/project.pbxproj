@@ -30,6 +30,7 @@
 		6AB1966C1F4E1FF4009CA615 /* AppReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB196691F4E1FF4009CA615 /* AppReviewsViewModel.swift */; };
 		6AB5023E1EF5EDBB0045C674 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */; };
 		6AB502401EF664550045C674 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB5023F1EF664550045C674 /* App.swift */; };
+		6ABF41B91F56028300DE7097 /* AppReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABF41B81F56028300DE7097 /* AppReviewsTableViewCell.swift */; };
 		6AC3F1B91F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC3F1B81F19CBBA00E29BE9 /* ReviewsFetcherUITests.swift */; };
 		6AC94A261F51506E0047F143 /* AppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC94A251F51506E0047F143 /* AppReview.swift */; };
 		6AC94A281F52C29D0047F143 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC94A271F52C29D0047F143 /* BaseViewController.swift */; };
@@ -89,6 +90,7 @@
 		6AB196691F4E1FF4009CA615 /* AppReviewsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReviewsViewModel.swift; sourceTree = "<group>"; };
 		6AB5023D1EF5EDBB0045C674 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		6AB5023F1EF664550045C674 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		6ABF41B81F56028300DE7097 /* AppReviewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		6AC3F1A81F19CB9900E29BE9 /* ReviewsFetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC3F1AC1F19CB9900E29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC3F1B61F19CBBA00E29BE9 /* ReviewsFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewsFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +271,7 @@
 				6AB196671F4E1FF4009CA615 /* AppReviews.storyboard */,
 				6AB196681F4E1FF4009CA615 /* AppReviewsViewController.swift */,
 				6AB196691F4E1FF4009CA615 /* AppReviewsViewModel.swift */,
+				6ABF41B81F56028300DE7097 /* AppReviewsTableViewCell.swift */,
 			);
 			path = AppReviews;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				6A2AC1441F2A907000FE0C71 /* ParseManager.swift in Sources */,
 				6AC94A261F51506E0047F143 /* AppReview.swift in Sources */,
 				6A3DDF871F3598C8002EA965 /* String+Extensions.swift in Sources */,
+				6ABF41B91F56028300DE7097 /* AppReviewsTableViewCell.swift in Sources */,
 				6A2AC1421F2A8E0300FE0C71 /* NetworkManager.swift in Sources */,
 				6AB196621F4E1A5F009CA615 /* BaseViewModelDelegate.swift in Sources */,
 				6A1B07F81F1A292400CFEE89 /* HomeViewModel.swift in Sources */,
