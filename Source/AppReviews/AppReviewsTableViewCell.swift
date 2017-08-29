@@ -12,6 +12,10 @@ final class AppReviewsTableViewCell: UITableViewCell {
 
   // MARK: IBOutlets
 
+  @IBOutlet weak private var starLabel: UILabel!
+  @IBOutlet weak private var dateAndVersionLabel: UILabel!
+  @IBOutlet weak private var titleLabel: UILabel!
+  @IBOutlet weak private var reviewLabel: UILabel!
 
   // MARK: Public Methods
 
