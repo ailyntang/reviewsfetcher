@@ -10,4 +10,13 @@ import UIKit
 
 final class AppReviewsTableViewCell: UITableViewCell {
 
+  // MARK: IBOutlets
+
+
+  // MARK: Public Methods
+
+  func setupAppReviews() {
+    
+  }
+
 }

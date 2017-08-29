@@ -61,6 +61,26 @@ extension AppReviewsViewController: BaseViewModelDelegate {
 
 }
 
+// MARK: - Conformance: UITableViewDataSource
+
+extension AppReviewsViewController: UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cellIdentifier = "AppReviewsTableViewCell"
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AppReviewsTableViewCell else {
+      fatalError("The dequeued cell is not an instance of AppReviewsTableViewCell")
+    }
+
+    cell.setupAppReviews()
+    return cell
+  }
+
+}
+
 // MARK: - Private Methods
 
 private extension AppReviewsViewController {
