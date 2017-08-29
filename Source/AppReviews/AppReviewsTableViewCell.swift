@@ -6,4 +6,8 @@
 //  Copyright © 2017 Ai-Lyn Tang. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class AppReviewsTableViewCell: UITableViewCell {
+
+}
