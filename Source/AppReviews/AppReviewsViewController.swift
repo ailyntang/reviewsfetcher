@@ -59,7 +59,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
     self.setupActivityIndicator(state: activityIndicatorState)
   }
 
-  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewTo review: AppReview) {
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewsTo reviews: [AppReview]) {
     
   }
 

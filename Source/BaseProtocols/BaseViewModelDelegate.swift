@@ -18,6 +18,6 @@ protocol BaseViewModelDelegate: class {
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App)
 
-  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewTo review: AppReview)
-  
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewsTo reviews: [AppReview])
+
 }
