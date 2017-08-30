@@ -71,6 +71,8 @@ extension HomeViewController: BaseViewModelDelegate {
     }
   }
 
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewTo review: AppReview) { }
+
 }
 
 // MARK: - Conformance: UITableViewDataSource
