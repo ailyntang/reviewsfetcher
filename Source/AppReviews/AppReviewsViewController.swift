@@ -72,7 +72,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
 extension AppReviewsViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return reviews.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,7 +81,8 @@ extension AppReviewsViewController: UITableViewDataSource {
       fatalError("The dequeued cell is not an instance of AppReviewsTableViewCell")
     }
 
-    cell.setupAppReviews(with: reviews)
+    let review = reviews[indexPath.row]
+    cell.setupAppReview(with: review)
     return cell
   }
 
