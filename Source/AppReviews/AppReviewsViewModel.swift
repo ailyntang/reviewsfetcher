@@ -47,10 +47,11 @@ private extension AppReviewsViewModel {
                               clientKey: authCredentials.clientKey)
 
     if let appId = appId {
-      NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReview in
+      NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReviews in
 
-        if let appReview = appReview {
-          print(appReview)
+        if let appReviews = appReviews {
+          self.delegate?.viewModel(self, didUpdateAppReviewsTo: appReviews)
+
         } else {
           print("API call returned nil for app reviews")
         }
