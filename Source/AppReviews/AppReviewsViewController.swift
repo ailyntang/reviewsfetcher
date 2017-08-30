@@ -14,6 +14,8 @@ final class AppReviewsViewController: BaseViewController {
 
   private var viewModel: BaseViewModelType!
 
+  fileprivate var reviews: [AppReview] = []
+
   // MARK: IBOutlets
 
   @IBOutlet fileprivate weak var appNameLabel: UILabel!
@@ -60,7 +62,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewsTo reviews: [AppReview]) {
-    
+    self.reviews = reviews
   }
 
 }
