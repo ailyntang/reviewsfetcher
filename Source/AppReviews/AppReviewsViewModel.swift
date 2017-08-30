@@ -10,7 +10,7 @@ import Foundation
 
 final class AppReviewsViewModel {
 
-  // MARK: Conformance: AppDetailsViewModelType
+  // MARK: Conformance: BaseViewModelType
 
   weak var delegate: BaseViewModelDelegate?
 
@@ -26,7 +26,7 @@ final class AppReviewsViewModel {
 
 }
 
-// MARK: - Conformance: AppDetailsViewModelType
+// MARK: - Conformance: BaseViewModelType
 
 extension AppReviewsViewModel: BaseViewModelType {
 
