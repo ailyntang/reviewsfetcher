@@ -12,21 +12,21 @@ final class AppReview {
 
   // MARK: Public Properties
 
-  let appId: Int?
+  let appId: Int
   let title: String?
   let review: String?
-  let stars: String?
-  let version: String?
-  let date: String?
+  let stars: String
+  let version: String
+  let date: String
 
   // MARK: Initialisation
 
-  init(appId: Int? = nil,
+  init(appId: Int,
        title: String? = nil,
        review: String? = nil,
-       stars: String? = nil,
-       version: String? = nil,
-       date: String? = nil) {
+       stars: String,
+       version: String,
+       date: String) {
 
     self.appId = appId
     self.title = title
