@@ -81,7 +81,7 @@ extension AppReviewsViewController: UITableViewDataSource {
       fatalError("The dequeued cell is not an instance of AppReviewsTableViewCell")
     }
 
-    cell.setupAppReviews()
+    cell.setupAppReviews(with: reviews)
     return cell
   }
 

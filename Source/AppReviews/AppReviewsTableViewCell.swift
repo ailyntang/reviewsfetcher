@@ -19,7 +19,7 @@ final class AppReviewsTableViewCell: UITableViewCell {
 
   // MARK: Public Methods
 
-  func setupAppReviews() {
+  func setupAppReviews(with reviews: [AppReview]) {
     
   }
 
