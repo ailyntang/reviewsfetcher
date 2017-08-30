@@ -12,10 +12,12 @@ protocol BaseViewModelDelegate: class {
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String)
 
-  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App)
-
   func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool)
 
   func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String)
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppOverviewTo app: App)
+
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewTo review: AppReview)
   
 }
