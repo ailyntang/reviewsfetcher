@@ -53,11 +53,12 @@ private extension AppReviewsViewModel {
           self.delegate?.viewModel(self, didUpdateAppReviewsTo: appReviews)
 
         } else {
+          // TODO: Hide table view
           print("API call returned nil for app reviews")
         }
       })
     } else {
-      // Handle nil value. This could occur if the cell clicked was an error with no app id.
+      // TODO: Handle appId = nil. This could occur if the cell clicked was an error with no app id.
     }
 
     delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
