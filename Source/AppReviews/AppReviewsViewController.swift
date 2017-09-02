@@ -99,7 +99,7 @@ private extension AppReviewsViewController {
 
       let version = app.version ?? ": no version listed"
       let store = app.store ?? "No store listed"
-      versionLabel.text = "Version \(version) (\(store))"
+      versionLabel.text = "Current version: \(version) (\(store))"
 
     } else {
       // TODO: Native alert to say go back one screen?
