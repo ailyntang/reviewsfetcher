@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol HomeViewModelType {
+
+  weak var delegate: HomeViewModelDelegate? { get set }
+
+}
