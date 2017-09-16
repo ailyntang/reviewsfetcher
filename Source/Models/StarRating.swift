@@ -14,21 +14,36 @@ final class StarRating: UIStackView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    setupStars()
+    setupStars(rating: 3)
   }
   
   required init(coder: NSCoder) {
     super.init(coder: coder)
-    setupStars()
+    setupStars(rating: 3)
   }
  
   // MARK: Private Methods
   
-  private func setupStars() {
+  private func setupStars(rating: Int) {
     
-    for _ in 0..<5 {
-      let star = UIImageView(image: #imageLiteral(resourceName: "imgEmptyStar"))
+    let numberOfStars: Int = 5
+    var images = [Bool](repeating: false, count: numberOfStars)
+    
+    for index in 0..<rating {
+      images[index] = true
+    }
+    
+    for index in 0..<numberOfStars {
+      let star: UIImageView
+      
+      if images[index] {
+        star = UIImageView(image: #imageLiteral(resourceName: "imgFilledStar"))
+      } else {
+        star = UIImageView(image: #imageLiteral(resourceName: "imgEmptyStar"))
+      }
+      
       addArrangedSubview(star)
     }
   }
+
 }
