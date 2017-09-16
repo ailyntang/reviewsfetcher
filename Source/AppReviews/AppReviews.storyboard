@@ -58,7 +58,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="s3k-WO-0Of">
                                                     <rect key="frame" x="8" y="21" width="112" height="58.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-66-56L">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-66-56L" customClass="StarRating" customModule="ReviewsFetcher" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="15"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="xzC-6G-ILy">
