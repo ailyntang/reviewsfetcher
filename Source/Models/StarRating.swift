@@ -10,23 +10,39 @@ import UIKit
 
 final class StarRating: UIStackView {
   
+  // MARK: Properties
+  
+  /**
+   The rating corresponds to the number of filled stars that appear
+  */
+  var rating: Int? {
+    didSet {
+      setupStars(rating: rating)
+    }
+  }
+  
+  private var numberOfStars: Int = 5
+  
   // MARK: Initialization
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    setupStars(rating: 3)
+    setupStars(rating: rating)
   }
   
   required init(coder: NSCoder) {
     super.init(coder: coder)
-    setupStars(rating: 3)
+    setupStars(rating: rating)
   }
- 
+  
   // MARK: Private Methods
   
-  private func setupStars(rating: Int) {
+  private func setupStars(rating: Int?) {
     
-    let numberOfStars: Int = 5
+    guard let rating = rating else {
+      return
+    }
+    
     var images = [Bool](repeating: false, count: numberOfStars)
     
     for index in 0..<rating {
