@@ -13,7 +13,7 @@ extension String {
   /**
    Takes a string and returns a UIImage.
    
-   - parameter string: A string containing a url address that is an image
+   - parameter imageView: A string containing a url address that is an image
    - returns: A UIImage based on the url string or a default image if the url string
    cannot be converted to an image.
   */
@@ -49,4 +49,17 @@ extension String {
     downloadImage.resume()
   }
 
+  /**
+   Takes a string in the form of "3.00" and converts it to an integer.
+   - returns: An integer
+  */
+  func convertDoubleToInt() -> Int {
+    
+    guard let double = Double(self) else {
+      fatalError("Cannot convert string to double")
+    }
+    
+    return Int(double)
+  }
+  
 }
