@@ -12,7 +12,7 @@ final class AppReviewsTableViewCell: UITableViewCell {
 
   // MARK: IBOutlets
 
-  @IBOutlet weak var starRatingStackView: StarRating!
+  @IBOutlet weak private var starRatingStackView: StarRating!
   @IBOutlet weak private var dateAndVersionLabel: UILabel!
   @IBOutlet weak private var titleLabel: UILabel!
   @IBOutlet weak private var reviewLabel: UILabel!
