@@ -60,23 +60,6 @@
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-66-56L" customClass="StarRating" customModule="ReviewsFetcher" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="15"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="xzC-6G-ILy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="15"/>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgEmptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-MO-ack">
-                                                                    <rect key="frame" x="18" y="0.0" width="18" height="15"/>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Uk-uT-FSF">
-                                                                    <rect key="frame" x="36" y="0.0" width="18" height="15"/>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-bD-wHE">
-                                                                    <rect key="frame" x="54" y="0.0" width="18" height="15"/>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="urY-e3-IBM">
-                                                                    <rect key="frame" x="72" y="0.0" width="18" height="15"/>
-                                                                </imageView>
-                                                            </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="90" id="JCc-ZX-cLB"/>
                                                                 <constraint firstAttribute="height" constant="15" id="JKo-x9-AZe"/>
@@ -175,8 +158,4 @@
             <point key="canvasLocation" x="-316" y="145.27736131934034"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imgEmptyStar" width="255" height="256"/>
-        <image name="imgFilledStar" width="237" height="238"/>
-    </resources>
 </document>
