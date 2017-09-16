@@ -10,7 +10,9 @@ import UIKit
 
 final class StarRating: UIStackView {
   
-  // MARK: Properties
+  // MARK: Public Properties
+  
+  private var stars = [UIImageView]()
   
   /**
    The rating corresponds to the number of filled stars that appear
@@ -21,7 +23,11 @@ final class StarRating: UIStackView {
     }
   }
   
+  // MARK: Properties
+  
   private var numberOfStars: Int = 5
+  
+//  private var stars: [UIImageView]()
   
   // MARK: Initialization
   
@@ -39,16 +45,27 @@ final class StarRating: UIStackView {
   
   private func setupStars(rating: Int?) {
     
+    // Clear existing stars
+    for star in stars {
+      removeArrangedSubview(star)
+      star.removeFromSuperview()
+    }
+    
+    stars.removeAll()
+    
+    // Exit if no rating is set
     guard let rating = rating else {
       return
     }
     
+    // Set the number of "trues" in the array based on the star rating
     var images = [Bool](repeating: false, count: numberOfStars)
     
     for index in 0..<rating {
       images[index] = true
     }
     
+    // Set the star image based on the star rating
     for index in 0..<numberOfStars {
       let star: UIImageView
       
@@ -58,7 +75,11 @@ final class StarRating: UIStackView {
         star = UIImageView(image: #imageLiteral(resourceName: "imgEmptyStar"))
       }
       
+      // Add star image to the stack view
       addArrangedSubview(star)
+      
+      // Add star image to the array used to clear the stars
+      stars.append(star)
     }
   }
 
