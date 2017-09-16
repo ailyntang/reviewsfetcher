@@ -12,7 +12,6 @@ final class AppReviewsTableViewCell: UITableViewCell {
 
   // MARK: IBOutlets
 
-  @IBOutlet weak private var starLabel: UILabel!
   @IBOutlet weak private var dateAndVersionLabel: UILabel!
   @IBOutlet weak private var titleLabel: UILabel!
   @IBOutlet weak private var reviewLabel: UILabel!
@@ -24,7 +23,6 @@ final class AppReviewsTableViewCell: UITableViewCell {
   // MARK: Public Methods
 
   func setupAppReview(with review: AppReview) {
-    starLabel.text = "\(review.stars) stars"
 
     // Read date string from `AppReview` model
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
