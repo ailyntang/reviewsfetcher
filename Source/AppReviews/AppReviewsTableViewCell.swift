@@ -24,7 +24,9 @@ final class AppReviewsTableViewCell: UITableViewCell {
   // MARK: Public Methods
 
   func setupAppReview(with review: AppReview) {
-
+    
+    starRatingStackView.rating = review.stars.convertDoubleToInt()
+    
     // Read date string from `AppReview` model
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
     let reviewDate = dateFormatter.date(from: review.date)
