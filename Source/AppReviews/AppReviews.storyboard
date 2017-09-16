@@ -99,6 +99,7 @@
                                         <connections>
                                             <outlet property="dateAndVersionLabel" destination="b0G-th-LTn" id="6JT-z9-duo"/>
                                             <outlet property="reviewLabel" destination="Q68-S8-cpb" id="Wti-hT-U5V"/>
+                                            <outlet property="starRatingStackView" destination="hx3-66-56L" id="iMd-A6-YxD"/>
                                             <outlet property="titleLabel" destination="xhU-7N-DCc" id="QvJ-zL-lLm"/>
                                         </connections>
                                     </tableViewCell>
