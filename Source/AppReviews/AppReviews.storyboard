@@ -56,7 +56,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="s3k-WO-0Of">
-                                                    <rect key="frame" x="8" y="21" width="112" height="58.5"/>
+                                                    <rect key="frame" x="8" y="21" width="327" height="58.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-66-56L" customClass="StarRating" customModule="ReviewsFetcher" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
@@ -80,7 +80,7 @@
                                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q68-S8-cpb">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q68-S8-cpb">
                                                                     <rect key="frame" x="0.0" y="29" width="112" height="14.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +94,7 @@
                                             <constraints>
                                                 <constraint firstItem="s3k-WO-0Of" firstAttribute="leading" secondItem="o6d-1O-vt8" secondAttribute="leadingMargin" id="dmH-r2-42Q"/>
                                                 <constraint firstItem="s3k-WO-0Of" firstAttribute="centerY" secondItem="o6d-1O-vt8" secondAttribute="centerY" id="eUt-4p-G8I"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s3k-WO-0Of" secondAttribute="trailing" id="fb9-B2-pRT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
