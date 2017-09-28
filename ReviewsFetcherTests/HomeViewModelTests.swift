@@ -47,9 +47,7 @@ final class HomeViewModelTests: QuickSpec {
                       releaseDate: "2014-10-22T00:00:00",
                       updatedDate: "2017-05-30T21:46:04")
 
-        it("makes a network call") {
-
-        }
+        it("makes a network call") { }
 
         it("returns a loading spinner for the duration of the call") {
 
@@ -64,8 +62,6 @@ final class HomeViewModelTests: QuickSpec {
           viewModelDelegateMock.didUpdateIsListAvailableExpectation = self.expectation(description: "didUpdateIsListAvailable should execute")
         }
 
-
-
         it("updates the app overview with the fetched app") {
 
           // Action
@@ -76,12 +72,12 @@ final class HomeViewModelTests: QuickSpec {
 
       context("when it has more than one app id input") {
 
-        it("sorts the apps in alphabetical order") {
-
-        }
+        it("sorts the apps in alphabetical order") { }
       }
+      
     }
   }
+  
 }
 
 // MARK: - Output Mock
@@ -102,9 +98,7 @@ private final class HomeViewModelDelegateMock: BaseViewModelDelegate {
     didUpdateAppOverviewExpectation?.fulfill()
   }
 
-  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String) {
-
-  }
+  func viewModel(_ viewModel: BaseViewModelType, didSortListBy appProperty: String) { }
 
   var didUpdateIsListAvailableExpectation: XCTestExpectation?
 
@@ -114,9 +108,7 @@ private final class HomeViewModelDelegateMock: BaseViewModelDelegate {
     didUpdateIsListAvailableExpectation?.fulfill()
   }
 
-  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
-
-  }
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) { }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewsTo reviews: [AppReview]) { }
   
