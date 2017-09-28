@@ -54,8 +54,8 @@ final class ParseManager {
     if let reviews = json["reviews"].array {
       for review in reviews {
         let appId     = review["product_id"].intValue
-        let title     = review["title"].stringValue
-        let appReview = review["review"].string ?? ""
+        let title     = review["title"].string ?? "-"
+        let appReview = review["review"].string ?? "-"
         let stars     = review["stars"].stringValue
         let version   = review["version"].stringValue
         let date      = review["date"].stringValue
