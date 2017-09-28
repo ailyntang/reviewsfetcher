@@ -137,6 +137,15 @@ final class ParseManagerTests: QuickSpec {
       
       context("when the json has a null title") {
         
+        // Assertion
+        if let reviews = reviews {
+          let review = reviews[2]
+          expect(review.appId).to(equal(212242352))
+          expect(review.date).to(equal("2017-07-31T00:37:54"))
+          expect(review.stars).to(equal("3.00"))
+          expect(review.title).to(equal("-"))
+          expect(review.version).to(equal("3.1.6"))
+        }
       }
       
       context("when the json has a null review") {
