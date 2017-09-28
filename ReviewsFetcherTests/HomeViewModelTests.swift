@@ -118,4 +118,6 @@ private final class HomeViewModelDelegateMock: BaseViewModelDelegate {
 
   }
 
+  func viewModel(_ viewModel: BaseViewModelType, didUpdateAppReviewsTo reviews: [AppReview]) { }
+  
 }
