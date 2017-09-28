@@ -96,12 +96,57 @@ final class ParseManagerTests: QuickSpec {
         }
       }
     }
+
+    // MARK: Parse app review
+    
+    describe("Parsing an app review") {
+      
+      // Arrangement
+      var reviews: [AppReview]?
+      
+      let urlReview = Bundle.main.url(forResource: "StubAppReviewsColesApple", withExtension: "json")
+      
+      context("when the json contains no null fields") {
+        
+        it("should return a review with the parsed parameters") {
+          
+          // Action
+          do {
+            let data = try Data(contentsOf: urlReview!)
+            let json = JSON(data: data)
+            reviews = ParseManager.parseAppReviews(from: json)
+          } catch {
+            print(error.localizedDescription)
+          }
+         
+          // Assertion
+          expect(reviews).toNot(beNil())
+          
+          if let reviews = reviews {
+            let review = reviews[1]
+            expect(review.appId).to(equal(212242352))
+            expect(review.date).to(equal("2017-08-04T07:09:32"))
+            expect(review.review).to(equal("It would be a great app if it showed the price of all items not just items that are on special. It seems to me that that's one of the main points of it- so I can check prices of things. Am I wrong?!"))
+            expect(review.stars).to(equal("3.00"))
+            expect(review.title).to(equal("Prices?"))
+            expect(review.version).to(equal("3.1.6"))
+          }
+        }
+      }
+      
+      context("when the json has a null title") {
+        
+      }
+      
+      context("when the json has a null review") {
+        
+      }
+      
+      context("when the json has a null field that is not title or review") {
+        
+      }
+      
+    }
+    
   }
-
-}
-
-// MARK: Parse app review
-
-extension ParseManagerTests {
-  
 }
