@@ -106,22 +106,23 @@ final class ParseManagerTests: QuickSpec {
       
       let urlReview = Bundle.main.url(forResource: "StubAppReviewsColesApple", withExtension: "json")
       
+      // Action
+      do {
+        let data = try Data(contentsOf: urlReview!)
+        let json = JSON(data: data)
+        reviews = ParseManager.parseAppReviews(from: json)
+      } catch {
+        print(error.localizedDescription)
+      }
+      
+      // Assertion
+      expect(reviews).toNot(beNil())
+
       context("when the json contains no null fields") {
         
         it("should return a review with the parsed parameters") {
-          
-          // Action
-          do {
-            let data = try Data(contentsOf: urlReview!)
-            let json = JSON(data: data)
-            reviews = ParseManager.parseAppReviews(from: json)
-          } catch {
-            print(error.localizedDescription)
-          }
-         
+        
           // Assertion
-          expect(reviews).toNot(beNil())
-          
           if let reviews = reviews {
             let review = reviews[1]
             expect(review.appId).to(equal(212242352))
