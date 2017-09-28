@@ -13,6 +13,8 @@ import SwiftyJSON
 
 @testable import ReviewsFetcher
 
+// MARK: Parse app overview
+
 final class ParseManagerTests: QuickSpec {
 
   override func spec() {
@@ -91,4 +93,10 @@ final class ParseManagerTests: QuickSpec {
     }
   }
 
+}
+
+// MARK: Parse app review
+
+extension ParseManagerTests {
+  
 }
