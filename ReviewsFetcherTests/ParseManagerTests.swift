@@ -13,12 +13,17 @@ import SwiftyJSON
 
 @testable import ReviewsFetcher
 
-// MARK: Parse app overview
+// TODO: How do we do this with the real API call? We'll need to change the assertions
+// Right now this test is completely run on Stubs. 
+// Would be more robust to run this on the real API, so we can catch changes 
+// that will break our code. But that costs money.
 
 final class ParseManagerTests: QuickSpec {
 
   override func spec() {
 
+    // MARK: Parse app overview
+    
     describe("Parsing an app overview") {
 
       // Arrangement
