@@ -25,11 +25,14 @@ final class HomeViewModel {
   // MARK: Properties
 
   fileprivate var listOfAppIds: [Int]?
+  
+  fileprivate var didUseApi: Bool = false
 
   // MARK: Initialisation
 
-  init(with listOfAppIds: [Int]?) {
+  init(with listOfAppIds: [Int]?, didUseApi: Bool) {
     self.listOfAppIds = listOfAppIds
+    self.didUseApi = didUseApi
   }
 }
 

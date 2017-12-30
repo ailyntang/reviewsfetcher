@@ -31,7 +31,7 @@ final class HomeViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = HomeViewModel(with: [264519898208])
+    viewModel = HomeViewModel(with: [264519898208], didUseApi: false)
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
     }
