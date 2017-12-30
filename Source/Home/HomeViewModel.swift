@@ -79,36 +79,27 @@ private extension HomeViewModel {
     
     if didUseApi {
       NetworkManager.fetchAppOverviewUsingApi(auth: authentication, appId: appId, completionHandler: { fetchedApp in
-        
-        var app: App
-        
-        if let fetchedApp = fetchedApp {
-          app = fetchedApp
-        } else {
-          app = App()
-        }
-        
-        self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
-        self.delegate?.viewModel(self, didSortListBy: "name")
-        self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+        self.setDelegates(fetchedApp: fetchedApp)
       })
-      
     } else {
       NetworkManager.fetchAppOverviewUsingStub(auth: authentication, appId: appId, completionHandler: { fetchedApp in
-        
-        var app: App
-        
-        if let fetchedApp = fetchedApp {
-          app = fetchedApp
-        } else {
-          app = App()
-        }
-        
-        self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
-        self.delegate?.viewModel(self, didSortListBy: "name")
-        self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+        self.setDelegates(fetchedApp: fetchedApp)
       })
     }
   }
   
+  func setDelegates(fetchedApp: App?) {
+    var app: App
+    
+    if let fetchedApp = fetchedApp {
+      app = fetchedApp
+    } else {
+      app = App()
+    }
+    
+    self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+    self.delegate?.viewModel(self, didSortListBy: "name")
+    self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+  }
+
 }
