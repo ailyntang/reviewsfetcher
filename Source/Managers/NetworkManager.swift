@@ -31,7 +31,7 @@ final class NetworkManager {
 
   // MARK: Call App Figures API (costs money)
 
-  class func fetchAppOverview2(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
+  class func fetchAppOverviewUsingApi(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
     let urlBaseString = "https://api.appfigures.com/v2/products/"
     let urlString = "\(urlBaseString)\(appId)"
@@ -59,7 +59,7 @@ final class NetworkManager {
 
   // MARK: `fetchAppOverview` stub to avoid using App FIgures API in testing
 
-  class func fetchAppOverview(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
+  class func fetchAppOverviewUsingStub(auth: Authentication, appId: Int, completionHandler: @escaping (App?) -> Void) {
 
     let url = Bundle.main.url(forResource: "StubAppOverview", withExtension: "json")
 

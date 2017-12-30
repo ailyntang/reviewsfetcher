@@ -69,27 +69,46 @@ private extension HomeViewModel {
   }
 
   func loadApp(appId: Int) {
-
+    
     let authCredentials = AuthenticationSecrets()
     let authentication = Authentication(username: authCredentials.username,
                                         password: authCredentials.password,
                                         clientKey: authCredentials.clientKey)
-
+    
     self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "start")
-
-    NetworkManager.fetchAppOverview(auth: authentication, appId: appId, completionHandler: { fetchedApp in
-
-      var app: App
-
-      if let fetchedApp = fetchedApp {
-        app = fetchedApp
-      } else {
-        app = App()
-      }
-
-      self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
-      self.delegate?.viewModel(self, didSortListBy: "name")
-      self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
-    })
+    
+    if didUseApi {
+      NetworkManager.fetchAppOverviewUsingApi(auth: authentication, appId: appId, completionHandler: { fetchedApp in
+        
+        var app: App
+        
+        if let fetchedApp = fetchedApp {
+          app = fetchedApp
+        } else {
+          app = App()
+        }
+        
+        self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+        self.delegate?.viewModel(self, didSortListBy: "name")
+        self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+      })
+      
+    } else {
+      NetworkManager.fetchAppOverviewUsingStub(auth: authentication, appId: appId, completionHandler: { fetchedApp in
+        
+        var app: App
+        
+        if let fetchedApp = fetchedApp {
+          app = fetchedApp
+        } else {
+          app = App()
+        }
+        
+        self.delegate?.viewModel(self, didUpdateAppOverviewTo: app)
+        self.delegate?.viewModel(self, didSortListBy: "name")
+        self.delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+      })
+    }
   }
+  
 }
