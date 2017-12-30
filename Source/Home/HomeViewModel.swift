@@ -15,6 +15,10 @@ import SwiftyJSON
  
  - Receiving input from its corresponding controller
  - Notfiying its delegate of UI updates
+ 
+ Use `didUseApi` to determine whether an API call should be used or a stub file.
+ In final production, it should always use an API call for live data.
+ However for testing purposes, a stub file will save us spending credits.
  */
 final class HomeViewModel {
 
