@@ -68,9 +68,9 @@ private extension AppReviewsViewModel {
   func setDelegates(appReviews: [AppReview]?) {
     if let appReviews = appReviews {
       self.delegate?.viewModel(self, didUpdateAppReviewsTo: appReviews)
-      
+      self.delegate?.viewModel(self, didUpdateIsListAvailableTo: true)
     } else {
-      // TODO: Hide table view
+      self.delegate?.viewModel(self, didUpdateIsListAvailableTo: false)
       print("API call returned nil for app reviews")
     }
   }
