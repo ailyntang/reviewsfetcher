@@ -142,6 +142,7 @@
                     <navigationItem key="navigationItem" id="obb-Fc-5R0"/>
                     <connections>
                         <outlet property="appNameLabel" destination="AVY-02-pPD" id="AJn-z5-ojQ"/>
+                        <outlet property="emptyListLabel" destination="ygT-6Q-AGd" id="Hbe-ut-K4u"/>
                         <outlet property="versionLabel" destination="bKN-M0-Shv" id="PGT-Qb-shb"/>
                     </connections>
                 </viewController>
