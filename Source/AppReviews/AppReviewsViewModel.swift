@@ -50,20 +50,23 @@ private extension AppReviewsViewModel {
 
     if let appId = appId {
       NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReviews in
-
-        if let appReviews = appReviews {
-          self.delegate?.viewModel(self, didUpdateAppReviewsTo: appReviews)
-
-        } else {
-          // TODO: Hide table view
-          print("API call returned nil for app reviews")
-        }
+        self.setDelegates(appReviews: appReviews)
       })
     } else {
       // TODO: Handle appId = nil. This could occur if the cell clicked was an error with no app id.
     }
 
     delegate?.viewModel(self, didUpdateActivityIndicatorStateTo: "stop")
+  }
+  
+  func setDelegates(appReviews: [AppReview]?) {
+    if let appReviews = appReviews {
+      self.delegate?.viewModel(self, didUpdateAppReviewsTo: appReviews)
+      
+    } else {
+      // TODO: Hide table view
+      print("API call returned nil for app reviews")
+    }
   }
 
 }
