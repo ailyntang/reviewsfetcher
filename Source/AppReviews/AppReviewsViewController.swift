@@ -27,12 +27,14 @@ final class AppReviewsViewController: BaseViewController {
   // TODO: how can we make this private? Think about using a delegate for the segue?
   var receivedApp: App?
 
+  var didUseApi: Bool = false
+  
   // MARK: Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = AppReviewsViewModel(with: receivedApp?.id, didUseApi: false)
+    viewModel = AppReviewsViewModel(with: receivedApp?.id, didUseApi: didUseApi)
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
 

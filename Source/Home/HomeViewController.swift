@@ -19,6 +19,9 @@ final class HomeViewController: BaseViewController {
   fileprivate var apps: [App] = []
 
   fileprivate var app: App?
+  
+  // Set this to false to use stubs, or true to use the real API calls
+  fileprivate var didUseApi: Bool = true
 
   // MARK: IBOutlets
 
@@ -31,7 +34,7 @@ final class HomeViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = HomeViewModel(with: [264519898208], didUseApi: false)
+    viewModel = HomeViewModel(with: [264519898208], didUseApi: didUseApi)
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
     }
@@ -110,6 +113,7 @@ extension HomeViewController: UITableViewDelegate {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let appDetailsVC = segue.destination as! AppReviewsViewController
     appDetailsVC.receivedApp = app
+    appDetailsVC.didUseApi = didUseApi
   }
 
 }
