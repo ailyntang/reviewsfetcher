@@ -17,11 +17,13 @@ final class AppReviewsViewModel {
   // MARK: Properties
 
   fileprivate var appId: Int?
+  fileprivate var didUseApi: Bool = false
 
   // MARK: Initialisation
 
-  init(with appId: Int? = nil) {
+  init(with appId: Int? = nil, didUseApi: Bool) {
     self.appId = appId
+    self.didUseApi = didUseApi
   }
 
 }

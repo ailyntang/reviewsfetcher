@@ -32,7 +32,7 @@ final class AppReviewsViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel = AppReviewsViewModel(with: receivedApp?.id)
+    viewModel = AppReviewsViewModel(with: receivedApp?.id, didUseApi: false)
     viewModel?.delegate = self
     viewModel?.controllerDidAppear()
 
