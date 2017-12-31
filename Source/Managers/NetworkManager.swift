@@ -87,6 +87,7 @@ final class NetworkManager {
 
     let startDate = "2017-08-01"
     let endDate = "2017-08-23"
+    //TODO: Update this so it's not just a fixed timeframe
 
     let urlBaseString = "https://api.appfigures.com/v2/reviews?&products="
     let urlString = "\(urlBaseString)\(appId)&start=\(startDate)&end=\(endDate)"
