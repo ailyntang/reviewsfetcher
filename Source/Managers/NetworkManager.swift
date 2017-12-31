@@ -78,14 +78,12 @@ final class NetworkManager {
 
   // MARK: - Fetch app reviews
 
-  // MARK: `fetchAppReviews` using real API call
-
   /**
    This function takes an `appId` that correlates to the product id used by App Figures.
    It uses this to make a network all to App Figures and returns the reviews for that app.
    If there is an error, it will return `nil`.
   */
-  class func fetchAppReviews2(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
+  class func fetchAppReviewsUsingApi(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
 
     let startDate = "2017-08-01"
     let endDate = "2017-08-23"
@@ -107,8 +105,7 @@ final class NetworkManager {
     }
   }
 
-  // MARK: `fetchAppReviews` stub to avoid using App FIgures API in testing
-  class func fetchAppReviews(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
+  class func fetchAppReviewsUsingStub(auth: Authentication, appId: Int, completionHandler: @escaping ([AppReview]?) -> Void) {
     let url = Bundle.main.url(forResource: "StubAppReviewsColesApple", withExtension: "json")
 
     do {
