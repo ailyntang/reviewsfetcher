@@ -60,6 +60,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
+    self.tableView.isHidden = !isListAvailable
     self.emptyListLabel.isHidden = isListAvailable
   }
 
