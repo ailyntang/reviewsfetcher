@@ -49,9 +49,15 @@ private extension AppReviewsViewModel {
                               clientKey: authCredentials.clientKey)
 
     if let appId = appId {
-      NetworkManager.fetchAppReviews(auth: auth, appId: appId, completionHandler: { appReviews in
-        self.setDelegates(appReviews: appReviews)
-      })
+      if didUseApi {
+        NetworkManager.fetchAppReviewsUsingApi(auth: auth, appId: appId, completionHandler: { appReviews in
+          self.setDelegates(appReviews: appReviews)
+        })
+      } else {
+        NetworkManager.fetchAppReviewsUsingStub(auth: auth, appId: appId, completionHandler: { appReviews in
+          self.setDelegates(appReviews: appReviews)
+        })
+      }
     } else {
       // TODO: Handle appId = nil. This could occur if the cell clicked was an error with no app id.
     }
