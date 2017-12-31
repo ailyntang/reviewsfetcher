@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="appNameLabel" destination="AVY-02-pPD" id="AJn-z5-ojQ"/>
                         <outlet property="emptyListLabel" destination="ygT-6Q-AGd" id="Hbe-ut-K4u"/>
+                        <outlet property="tableView" destination="N1y-u6-rkI" id="dEs-pJ-Qmg"/>
                         <outlet property="versionLabel" destination="bKN-M0-Shv" id="PGT-Qb-shb"/>
                     </connections>
                 </viewController>

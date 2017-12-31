@@ -23,6 +23,8 @@ final class AppReviewsViewController: BaseViewController {
   @IBOutlet fileprivate weak var versionLabel: UILabel!
   
   @IBOutlet fileprivate weak var emptyListLabel: UILabel!
+  
+  @IBOutlet fileprivate weak var tableView: UITableView!
 
   // MARK: Public Properties
 
@@ -58,7 +60,7 @@ extension AppReviewsViewController: BaseViewModelDelegate {
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateIsListAvailableTo isListAvailable: Bool) {
-
+    self.emptyListLabel.isHidden = isListAvailable
   }
 
   func viewModel(_ viewModel: BaseViewModelType, didUpdateActivityIndicatorStateTo activityIndicatorState: String) {
